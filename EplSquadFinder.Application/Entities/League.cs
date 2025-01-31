@@ -3,6 +3,8 @@
 public class League : BaseEntity
 {
     public required string Name { get; set; }
+    public required string Code { get; set; }
+    public int Season { get; set; }
     public DateTime SeasonStartDate { get; set; }
     public DateTime SeasonEndDate { get; set; }
     public Uri? EmblemPictureUri { get; set; }

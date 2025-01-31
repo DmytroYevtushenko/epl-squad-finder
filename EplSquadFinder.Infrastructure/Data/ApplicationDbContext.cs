@@ -23,7 +23,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
 
         foreach (var entry in entries)
         {
-            entry.Entity.LastUpdated = DateTime.UtcNow;
+            entry.Entity.LastRefreshed = DateTime.UtcNow;
         }
 
         return await base.SaveChangesAsync(cancellationToken);
