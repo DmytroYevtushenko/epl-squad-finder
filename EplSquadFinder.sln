@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Api", "EplSquadFinder.Api\EplSquadFinder.Api.csproj", "{9958CC3C-811A-499F-9424-456983CBB47D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{39007D06-0D4D-40C3-9A36-7755C680D7A0}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Application", "EplSquadFinder.Application\EplSquadFinder.Application.csproj", "{8393E18D-4345-4416-B6C0-7C9044EE977C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Infrastructure", "EplSquadFinder.Infrastructure\EplSquadFinder.Infrastructure.csproj", "{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9958CC3C-811A-499F-9424-456983CBB47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9958CC3C-811A-499F-9424-456983CBB47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9958CC3C-811A-499F-9424-456983CBB47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9958CC3C-811A-499F-9424-456983CBB47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8393E18D-4345-4416-B6C0-7C9044EE977C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8393E18D-4345-4416-B6C0-7C9044EE977C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8393E18D-4345-4416-B6C0-7C9044EE977C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8393E18D-4345-4416-B6C0-7C9044EE977C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
