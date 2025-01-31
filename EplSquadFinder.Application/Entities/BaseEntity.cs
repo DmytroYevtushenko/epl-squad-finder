@@ -3,5 +3,5 @@
 public abstract class BaseEntity
 {
     public int Id { get; set; }
-    public DateTime LastUpdated { get; set; }
+    public DateTime LastRefreshed { get; set; }
 }
