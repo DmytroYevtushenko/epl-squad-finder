@@ -1,0 +1,31 @@
+:root {
+  --bg-color: rgb(238, 239, 242);
+  --primary-color: rgb(14, 150, 85);
+  --font-family: 'Inter', sans-serif;
+  --font-color: rgb(19, 26, 54);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--font-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  min-width: 320px;
+  min-height: 100vh;
+}
