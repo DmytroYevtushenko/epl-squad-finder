@@ -10,7 +10,7 @@ public class Team : BaseEntity
     public int? ApiFootballId { get; set; }
     
     public int LeagueId { get; set; }
-    public required League League { get; set; }
+    public League League { get; set; }
     
     public ICollection<Player> Players { get; set; } = [];
     public ICollection<TeamNickname> Nicknames { get; set; } = [];

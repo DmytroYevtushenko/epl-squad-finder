@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Infrastructure", "EplSquadFinder.Infrastructure\EplSquadFinder.Infrastructure.csproj", "{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.DataGeneration", "EplSquadFinder.DataGeneration\EplSquadFinder.DataGeneration.csproj", "{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,5 +31,9 @@ Global
 		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C96B7CC7-0FB5-4811-8D02-FD8D3D75D4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,8 +1,10 @@
+using EplSquadFinder.Application;
 using EplSquadFinder.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddInfrastructureServices();
+builder.AddApplicationServices();
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
