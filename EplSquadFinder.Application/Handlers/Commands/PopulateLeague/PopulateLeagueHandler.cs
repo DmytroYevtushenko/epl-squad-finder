@@ -32,7 +32,7 @@ public class PopulateLeagueHandler(
         if (league == null)
         {
             logger.LogError("League {Id} not found", request.Id);
-            return Unit.Value;
+            throw new ArgumentException($"League {request.Id} not found");
         }
 
         // TODO: add error handling in case there are no such league. It should be fine for PL for now
