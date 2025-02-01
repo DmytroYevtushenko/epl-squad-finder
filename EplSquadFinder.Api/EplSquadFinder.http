@@ -1,0 +1,20 @@
+@EplSquadFinder_HostAddress = http://localhost:5290
+@ContentType = application/json
+
+### Get a specific League by ID
+GET {{EplSquadFinder_HostAddress}}/api/leagues/1
+Accept: {{ContentType}}
+
+### Get a specific Team by ID
+GET {{EplSquadFinder_HostAddress}}/api/teams/31
+Accept: {{ContentType}}
+
+### Add a Nickname to a Team
+POST {{EplSquadFinder_HostAddress}}/api/teamnicknames/team/14
+Content-Type: {{ContentType}}
+
+"The Hammers2"
+
+### Remove a Nickname from a Team by Nickname ID
+DELETE {{EplSquadFinder_HostAddress}}/api/teamnicknames/5
+Accept: {{ContentType}}
