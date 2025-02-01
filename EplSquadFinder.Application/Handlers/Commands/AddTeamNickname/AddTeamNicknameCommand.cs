@@ -1,5 +1,6 @@
-﻿using Mediator;
+﻿using EplSquadFinder.Application.Entities;
+using Mediator;
 
 namespace EplSquadFinder.Application.Handlers.Commands.AddTeamNickname;
 
-public record AddTeamNicknameCommand(int TeamId, string Name) : IRequest;
+public record AddTeamNicknameCommand(int TeamId, string Name) : IRequest<TeamNickname>;

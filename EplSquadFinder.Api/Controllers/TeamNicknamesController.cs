@@ -12,8 +12,8 @@ public class TeamNicknamesController(ISender sender) : ControllerBase
     [HttpPost("team/{teamId:int}")]
     public async Task<IActionResult> AddNickname(int teamId, [FromBody] string name)
     {
-        await sender.Send(new AddTeamNicknameCommand(teamId, name));
-        return Ok();
+        var result = await sender.Send(new AddTeamNicknameCommand(teamId, name));
+        return Ok(result);
     }
 
     [HttpDelete("{nicknameId:int}")]
