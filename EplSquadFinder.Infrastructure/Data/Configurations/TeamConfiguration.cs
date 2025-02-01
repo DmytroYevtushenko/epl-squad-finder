@@ -12,7 +12,7 @@ public class TeamConfiguration : IEntityTypeConfiguration<Team>
         builder.Property(t => t.ShortName).HasMaxLength(50);
         builder.Property(t => t.Website).HasMaxLength(255);
         builder.Property(t => t.EmblemPictureUri).HasMaxLength(255);
-        
+
         // To search by team names
         builder.HasIndex(t => t.Name);
 

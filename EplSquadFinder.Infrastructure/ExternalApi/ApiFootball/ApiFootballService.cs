@@ -13,8 +13,8 @@ public class ApiFootballService(IApiFootballClient client, ILogger<ApiFootballSe
         .Handle<Exception>()
         .OrResult(r => r.Errors?.ContainsKey("rateLimit") == true) // Retry on API rate limits
         .WaitAndRetryAsync(
-            Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(10), retryCount: 5),
-            (result, timeSpan, retryCount, context) =>
+            Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(10), 5),
+            (result, timeSpan, retryCount, _) =>
             {
                 logger.LogWarning("Retry {Retry}/5: Waiting {WaitTime} before retrying API call. Reason: {Reason}",
                     retryCount, timeSpan, result.Exception?.Message ?? "API Rate Limit");

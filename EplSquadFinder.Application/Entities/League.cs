@@ -10,6 +10,6 @@ public class League : BaseEntity
     public Uri? EmblemPictureUri { get; set; }
     public int? FootballDataId { get; set; }
     public int? ApiFootballId { get; set; }
-    
+
     public ICollection<Team> Teams { get; set; } = [];
 }

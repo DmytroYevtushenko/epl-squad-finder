@@ -10,12 +10,9 @@ public class RemoveTeamNicknameHandler(IApplicationDbContext dbContext) : IReque
     {
         var deletedRows = await dbContext.TeamNicknames
             .Where(x => x.Id == request.NicknameId)
-            .ExecuteDeleteAsync(cancellationToken: cancellationToken);
+            .ExecuteDeleteAsync(cancellationToken);
 
-        if (deletedRows == 0)
-        {
-            throw new ArgumentException($"Nickname with ID {request.NicknameId} not found.");
-        }
+        if (deletedRows == 0) throw new ArgumentException($"Nickname with ID {request.NicknameId} not found.");
 
         return Unit.Value;
     }

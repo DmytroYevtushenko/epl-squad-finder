@@ -30,27 +30,28 @@ public static class DependencyInjection
                 options.EnableDetailedErrors();
             }
         });
-        
-        builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+
+        builder.Services.AddScoped<IApplicationDbContext>(provider =>
+            provider.GetRequiredService<ApplicationDbContext>());
 
         var footballDataOptions = builder.Configuration.GetSection(FootballDataOptions.Key).Get<FootballDataOptions>();
         builder.Services.AddRefitClient<IFootballDataClient>()
             .ConfigureHttpClient(c =>
             {
-                c.BaseAddress = new Uri(footballDataOptions.BaseUrl);
+                c.BaseAddress = new Uri(footballDataOptions!.BaseUrl);
                 c.DefaultRequestHeaders.Add("X-Auth-Token", footballDataOptions.ApiKey);
             });
 
         builder.Services.AddScoped<IFootballDataService, FootballDataService>();
-        
+
         var apiFootballOptions = builder.Configuration.GetSection(ApiFootballOptions.Key).Get<ApiFootballOptions>();
         builder.Services.AddRefitClient<IApiFootballClient>()
             .ConfigureHttpClient(c =>
             {
-                c.BaseAddress = new Uri(apiFootballOptions.BaseUrl);
+                c.BaseAddress = new Uri(apiFootballOptions!.BaseUrl);
                 c.DefaultRequestHeaders.Add("x-apisports-key", apiFootballOptions.ApiKey);
             });
-        
+
         builder.Services.AddScoped<IApiFootballService, ApiFootballService>();
     }
 }

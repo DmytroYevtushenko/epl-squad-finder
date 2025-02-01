@@ -24,7 +24,7 @@ public class GetTeamQueryHandler(IApplicationDbContext dbContext) : IRequestHand
                     DateOfBirth = p.DateOfBirth,
                     Number = p.Number,
                     ProfilePic = p.ProfilePic,
-                    Age = p.Age,
+                    Age = p.Age
                 }),
                 Nicknames = x.Nicknames.Select(n => new TeamNicknameVm
                 {
