@@ -6,7 +6,8 @@ public class Player : BaseEntity
     public string Surname { get; set; }
     // Consider replacing it with enum
     public string Position { get; set; }
-    public DateTime DateOfBirth { get; set; }
+    public DateTime? DateOfBirth { get; set; }
+    public int? Age { get; set; }
     // Potentially can be nullable for free agents or youth players
     public int? Number { get; set; }
     public Uri? ProfilePic { get; set; }
