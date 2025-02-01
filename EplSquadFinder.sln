@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.DataGeneration", "EplSquadFinder.DataGeneration\EplSquadFinder.DataGeneration.csproj", "{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AFD64114-0961-4805-B81D-0CEB890A1B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EplSquadFinder.Application.Tests", "tests\EplSquadFinder.Application.Tests\EplSquadFinder.Application.Tests.csproj", "{C211903E-C4D3-40F8-89AB-11D99045FBD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +39,12 @@ Global
 		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71D27BA3-19DC-4CF6-AFD2-B025A75E553F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C211903E-C4D3-40F8-89AB-11D99045FBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C211903E-C4D3-40F8-89AB-11D99045FBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C211903E-C4D3-40F8-89AB-11D99045FBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C211903E-C4D3-40F8-89AB-11D99045FBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C211903E-C4D3-40F8-89AB-11D99045FBD2} = {AFD64114-0961-4805-B81D-0CEB890A1B04}
 	EndGlobalSection
 EndGlobal
