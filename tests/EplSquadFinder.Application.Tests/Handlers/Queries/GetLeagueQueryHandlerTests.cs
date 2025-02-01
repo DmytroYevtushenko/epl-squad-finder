@@ -72,6 +72,6 @@ public class GetLeagueQueryHandlerTests
         var result = await _handler.Handle(query, CancellationToken.None);
 
         // Assert
-        result.ShouldBeNull();
+        result.ShouldNotBeNull(); // temporary to tests build validation
     }
 }
