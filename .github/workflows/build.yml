@@ -26,7 +26,7 @@ jobs:
       run: dotnet build EplSquadFinder.Api/EplSquadFinder.Api.csproj --configuration Release --no-restore
 
     - name: Run Tests
-      run: dotnet test tests/EplSquadFinder.Application.Tests/EplSquadFinder.Application.Tests.csproj --configuration Release --no-restore"
+      run: dotnet test tests/EplSquadFinder.Application.Tests/EplSquadFinder.Application.Tests.csproj --configuration Release --no-restore
 
   deploy:
     needs: build_and_test
