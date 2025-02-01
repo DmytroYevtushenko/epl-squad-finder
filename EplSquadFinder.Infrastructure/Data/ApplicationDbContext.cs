@@ -10,6 +10,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<League> Leagues => Set<League>();
     public DbSet<Team> Teams => Set<Team>();
     public DbSet<Player> Players => Set<Player>();
+    public DbSet<TeamNickname> TeamNicknames => Set<TeamNickname>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
