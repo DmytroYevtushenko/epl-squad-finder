@@ -81,6 +81,7 @@ public class PopulateLeagueHandler(
         return Unit.Value;
     }
 
+    // Find best match for team from two API sources
     private ApiFootballTeam? FindBestApiTeamMatch(List<ApiFootballTeamWrapper> apiTeams, TeamResponse teamData)
     {
         var potentialMatches = apiTeams.Select(x => new
@@ -148,7 +149,8 @@ public class PopulateLeagueHandler(
                     Score = Fuzz.PartialRatio(NormalizeName(fdPlayer.Name), NormalizeName(apiPlayer.Name))
                 })
                 .OrderByDescending(x => x.Score)
-                .FirstOrDefault(x => x.Score > 65); // Accept only good matches
+                // Accept only good matches. You can play with this score value to find better balance
+                .FirstOrDefault(x => x.Score > 65);
 
             if (bestMatch != null)
             {
@@ -208,6 +210,8 @@ public class PopulateLeagueHandler(
         }
     }
 
+    // Calculate match score between two API teams. 
+    // Potentially it can be improved, but it works good enough for PL case for now
     private static double CalculateTeamsMatchScore(TeamResponse leagueTeam, ApiFootballTeam apiTeam,
         ApiFootballVenue? venue)
     {
@@ -241,7 +245,7 @@ public class PopulateLeagueHandler(
         if (venue != null && !string.IsNullOrEmpty(leagueTeam.Venue) && !string.IsNullOrEmpty(venue.Name))
         {
             double venueMatchScore = Fuzz.PartialRatio(venue.Name, leagueTeam.Venue);
-            // I assume a youth team usually plays on the same stadium
+            // I assume a youth team usually plays on the same stadium, so give them less weight
             score += isApiTeamYouth ? 0.05 * venueMatchScore : 0.25 * venueMatchScore;
         }
 
