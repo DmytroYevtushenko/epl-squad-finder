@@ -4,12 +4,14 @@ using Mediator;
 
 namespace EplSquadFinder.Application.Handlers.Commands.AddTeamNickname;
 
-public class AddTeamNicknameHandler(IApplicationDbContext dbContext) : IRequestHandler<AddTeamNicknameCommand>
+public class AddTeamNicknameHandler(IApplicationDbContext dbContext)
+    : IRequestHandler<AddTeamNicknameCommand, TeamNickname>
 {
-    public async ValueTask<Unit> Handle(AddTeamNicknameCommand request, CancellationToken cancellationToken)
+    public async ValueTask<TeamNickname> Handle(AddTeamNicknameCommand request, CancellationToken cancellationToken)
     {
-        dbContext.TeamNicknames.Add(new TeamNickname { Name = request.Name, TeamId = request.TeamId });
+        var entity = new TeamNickname { Name = request.Name, TeamId = request.TeamId };
+        dbContext.TeamNicknames.Add(entity);
         await dbContext.SaveChangesAsync(cancellationToken);
-        return Unit.Value;
+        return entity;
     }
 }
