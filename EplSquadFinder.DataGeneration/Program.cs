@@ -12,7 +12,7 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.Configuration
     .SetBasePath(AppContext.BaseDirectory)
-    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+    .AddJsonFile("appsettings.json", false, true);
 
 builder.AddInfrastructureServices();
 builder.AddApplicationServices();
@@ -38,10 +38,7 @@ var leagueIds = await dbContext.Leagues
     .Select(x => x.Id)
     .ToListAsync(cts.Token);
 
-if (leagueIds.Count == 0)
-{
-    Console.WriteLine("No empty leagues found.");
-}
+if (leagueIds.Count == 0) Console.WriteLine("No empty leagues found.");
 
 foreach (var id in leagueIds)
 {
@@ -54,4 +51,4 @@ foreach (var id in leagueIds)
     await sender.Send(new PopulateLeagueCommand(id), cts.Token);
 }
 
-Console.WriteLine($"Leagues refreshed.");
+Console.WriteLine("Leagues refreshed.");

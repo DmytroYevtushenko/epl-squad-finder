@@ -53,10 +53,7 @@ public class PopulateLeagueHandler(
         foreach (var teamData in fdLeagueResponse.Teams)
         {
             var bestMatchTeam = FindBestApiTeamMatch(apiTeams, teamData);
-            if (bestMatchTeam == null)
-            {
-                continue;
-            }
+            if (bestMatchTeam == null) continue;
 
             var teamEntity = new Team
             {
@@ -70,7 +67,7 @@ public class PopulateLeagueHandler(
             };
             league.Teams.Add(teamEntity);
 
-            var apiPlayers = await apiFootballService.GetSquadByTeamIdAsync(bestMatchTeam.Id, useRetries: true);
+            var apiPlayers = await apiFootballService.GetSquadByTeamIdAsync(bestMatchTeam.Id, true);
             var fdPlayers = teamData.Squad;
 
             PopulatePlayers(teamEntity, apiPlayers, fdPlayers);
@@ -102,9 +99,7 @@ public class PopulateLeagueHandler(
             {
                 logger.LogWarning("Multiple potential matches for {TeamName}:", teamData.Name);
                 foreach (var match in potentialMatches)
-                {
                     logger.LogWarning("- {ApiTeamName} (Score: {Score})", match.Team.Name, match.Score);
-                }
 
                 break;
             }
@@ -122,16 +117,11 @@ public class PopulateLeagueHandler(
             league.SeasonEndDate = fdLeagueResponse.Season.EndDate;
         }
 
-        if (fdLeagueResponse.Competition == null)
-        {
-            return;
-        }
+        if (fdLeagueResponse.Competition == null) return;
 
         league.FootballDataId = fdLeagueResponse.Competition.Id;
         if (fdLeagueResponse.Competition.Emblem != null)
-        {
             league.EmblemPictureUri = new Uri(fdLeagueResponse.Competition.Emblem);
-        }
     }
 
     private void PopulatePlayers(Team team, List<ApiFootballPlayer> apiPlayers, List<TeamSquad> fdPlayers)
@@ -155,16 +145,10 @@ public class PopulateLeagueHandler(
             if (bestMatch != null)
             {
                 var firstName = ExtractFirstName(bestMatch.FootballDataPlayer.Name) ?? ExtractFirstName(apiPlayer.Name);
-                if (firstName == null)
-                {
-                    continue;
-                }
+                if (firstName == null) continue;
 
                 var lastName = ExtractLastName(bestMatch.FootballDataPlayer.Name) ?? ExtractLastName(apiPlayer.Name);
-                if (lastName == null)
-                {
-                    continue;
-                }
+                if (lastName == null) continue;
 
                 usedFootballDataIds.Add(bestMatch.FootballDataPlayer.Id);
 
@@ -185,16 +169,10 @@ public class PopulateLeagueHandler(
             {
                 logger.LogWarning("No players found for player {Name}", apiPlayer.Name);
                 var firstName = ExtractFirstName(apiPlayer.Name);
-                if (firstName == null)
-                {
-                    continue;
-                }
+                if (firstName == null) continue;
 
                 var lastName = ExtractLastName(apiPlayer.Name);
-                if (lastName == null)
-                {
-                    continue;
-                }
+                if (lastName == null) continue;
 
                 team.Players.Add(new Player
                 {
@@ -223,10 +201,7 @@ public class PopulateLeagueHandler(
             YouthTeamPrefixes.Any(prefix => apiTeam.Name.Contains(prefix, StringComparison.OrdinalIgnoreCase));
 
         // If league team is NOT a youth team, penalize youth teams heavily (-50)
-        if (!isLeagueTeamYouth && isApiTeamYouth)
-        {
-            score -= 50;
-        }
+        if (!isLeagueTeamYouth && isApiTeamYouth) score -= 50;
 
         // 1 Exact Name Match
         score += 0.6 * Fuzz.Ratio(leagueTeam.Name, apiTeam.Name);
@@ -237,9 +212,7 @@ public class PopulateLeagueHandler(
         // 3 Code matches
         if (!string.IsNullOrEmpty(leagueTeam.Tla) &&
             string.Equals(leagueTeam.Tla, apiTeam.Code, StringComparison.OrdinalIgnoreCase))
-        {
             score += 30;
-        }
 
         // 4 Venue Name Match
         if (venue != null && !string.IsNullOrEmpty(leagueTeam.Venue) && !string.IsNullOrEmpty(venue.Name))

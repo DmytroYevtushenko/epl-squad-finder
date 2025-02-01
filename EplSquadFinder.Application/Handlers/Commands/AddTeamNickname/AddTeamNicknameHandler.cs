@@ -8,7 +8,7 @@ public class AddTeamNicknameHandler(IApplicationDbContext dbContext) : IRequestH
 {
     public async ValueTask<Unit> Handle(AddTeamNicknameCommand request, CancellationToken cancellationToken)
     {
-        dbContext.TeamNicknames.Add(new TeamNickname { Name = request.Name, TeamId = request.TeamId});
+        dbContext.TeamNicknames.Add(new TeamNickname { Name = request.Name, TeamId = request.TeamId });
         await dbContext.SaveChangesAsync(cancellationToken);
         return Unit.Value;
     }

@@ -7,15 +7,18 @@ namespace EplSquadFinder.Application.Abstractions.ApiFootballService.Models;
 // Potentially it is not a good place to handle this, but it is a quick fix for now.
 public class ApiFootballErrorFieldJsonConverter : JsonConverter<Dictionary<string, string>?>
 {
-    public override Dictionary<string, string>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override Dictionary<string, string>? Read(ref Utf8JsonReader reader, Type typeToConvert,
+        JsonSerializerOptions options)
     {
         if (reader.TokenType == JsonTokenType.StartObject)
-        {
             return JsonSerializer.Deserialize<Dictionary<string, string>>(ref reader, options);
-        }
-        else if (reader.TokenType == JsonTokenType.StartArray)
+
+        if (reader.TokenType == JsonTokenType.StartArray)
         {
-            while (reader.Read() && reader.TokenType != JsonTokenType.EndArray) { }
+            while (reader.Read() && reader.TokenType != JsonTokenType.EndArray)
+            {
+            }
+
             return null;
         }
 
