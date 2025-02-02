@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build_and_test:
@@ -30,7 +31,7 @@ jobs:
 
   build_and_push:
     needs: build_and_test
-    if: github.ref == 'refs/heads/main' # Push images only if code is already in main
+    #if: github.ref == 'refs/heads/main' # Push images only if code is already in main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -62,11 +63,13 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+      
       - name: Deploy UI to Azure Container Apps
-        run: |
-          az containerapp update \
-            --name epl-squad-finder-ui \
-            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
-            --image ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest \
-            --cpu 0.25 --memory 512Mi
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}
+          container-app-name: epl-squad-finder-ui
+          image: ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest
+          registry-url: ${{ secrets.ACR_NAME }}.azurecr.io
+          registry-username: ${{ secrets.ACR_USERNAME }}
+          registry-password: ${{ secrets.ACR_PASSWORD }}
