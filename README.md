@@ -60,7 +60,13 @@ docker compose up --build
 - API (running on [http://localhost:5290](http://localhost:5290))
 - UI (running on [http://localhost:3000](http://localhost:3000))
 
-> **Note:** The console app requires API keys to be set in compose.yaml. Alternatively, you can seed the database by running the SQL script from `/database/seed.sql`.
+> **Note:** The console app requires API keys to be set in `compose.yaml`. Alternatively, if you prefer not to register and insert API keys, you can manually seed the database using the following command:
+
+```sh
+docker-compose --profile manual run db-seed
+```
+
+This command will execute the `seed.sql` script in the Docker container, populating the database with predefined data.
 
 ### 🔹 3.1 Run Without Docker
 1. **Database Setup**
