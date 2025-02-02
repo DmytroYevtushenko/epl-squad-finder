@@ -26,12 +26,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s ease;
-
-  &:hover,
-  &:focus {
-    color: #535bf2;
-    text-decoration: underline;
-  }
 `;
 
 const Navbar = () => {

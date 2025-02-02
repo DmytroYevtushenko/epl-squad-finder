@@ -13,7 +13,7 @@ public class ApiFootballService(IApiFootballClient client, ILogger<ApiFootballSe
         .Handle<Exception>()
         .OrResult(r => r.Errors?.ContainsKey("rateLimit") == true) // Retry on API rate limits
         .WaitAndRetryAsync(
-            Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(10), 5),
+            Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(20), 8),
             (result, timeSpan, retryCount, _) =>
             {
                 logger.LogWarning("Retry {Retry}/5: Waiting {WaitTime} before retrying API call. Reason: {Reason}",
@@ -32,7 +32,7 @@ public class ApiFootballService(IApiFootballClient client, ILogger<ApiFootballSe
         if (useRetries)
         {
             var result = await _retryPolicy.ExecuteAsync(async () => await client.GetSquadByTeamIdAsync(teamId));
-            return result?.Response == null ? [] : result.Response[0].Players;
+            return result?.Response == null  ? [] : result.Response[0].Players;
         }
         else
         {

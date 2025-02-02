@@ -1,87 +1,25 @@
-USE [EplSquadFinderDb]
-GO
-/****** Object:  Table [dbo].[Leagues]    Script Date: 2/1/2025 9:42:07 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Leagues](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](100) NOT NULL,
-	[SeasonStartDate] [datetime2](7) NOT NULL,
-	[SeasonEndDate] [datetime2](7) NOT NULL,
-	[EmblemPictureUri] [nvarchar](255) NULL,
-	[FootballDataId] [int] NULL,
-	[ApiFootballId] [int] NULL,
-	[Code] [nvarchar](10) NOT NULL,
-	[Season] [int] NOT NULL,
- CONSTRAINT [PK_Leagues] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Players]    Script Date: 2/1/2025 9:42:07 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Players](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[FirstName] [nvarchar](50) NOT NULL,
-	[Surname] [nvarchar](50) NOT NULL,
-	[Position] [nvarchar](20) NOT NULL,
-	[DateOfBirth] [datetime2](7) NULL,
-	[Number] [int] NULL,
-	[ProfilePic] [nvarchar](255) NULL,
-	[ApiFootballId] [int] NULL,
-	[FootballDataId] [int] NULL,
-	[TeamId] [int] NOT NULL,
-	[Age] [int] NULL,
- CONSTRAINT [PK_Players] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[TeamNicknames]    Script Date: 2/1/2025 9:42:07 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[TeamNicknames](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](100) NOT NULL,
-	[TeamId] [int] NOT NULL,
- CONSTRAINT [PK_TeamNicknames] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Teams]    Script Date: 2/1/2025 9:42:07 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Teams](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](100) NOT NULL,
-	[ShortName] [nvarchar](50) NULL,
-	[Website] [nvarchar](255) NULL,
-	[EmblemPictureUri] [nvarchar](255) NULL,
-	[FootballDataId] [int] NULL,
-	[ApiFootballId] [int] NULL,
-	[LeagueId] [int] NOT NULL,
- CONSTRAINT [PK_Teams] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
 SET IDENTITY_INSERT [dbo].[Leagues] ON 
 GO
-INSERT [dbo].[Leagues] ([Id], [Name], [SeasonStartDate], [SeasonEndDate], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [Code], [Season]) VALUES (1, N'Premier League', CAST(N'2024-08-16T00:00:00.0000000' AS DateTime2), CAST(N'2025-05-25T00:00:00.0000000' AS DateTime2), N'https://crests.football-data.org/PL.png', 2021, NULL, N'PL', 2024)
+IF EXISTS (SELECT 1 FROM [dbo].[Leagues] WHERE [Id] = 1)
+BEGIN
+    UPDATE [dbo].[Leagues]
+       SET [Name] = N'Premier League',
+           [SeasonStartDate] = CAST(N'2024-08-16T00:00:00.0000000' AS DateTime2),
+           [SeasonEndDate] = CAST(N'2025-05-25T00:00:00.0000000' AS DateTime2),
+           [EmblemPictureUri] = N'https://crests.football-data.org/PL.png',
+           [FootballDataId] = 2021,
+           [ApiFootballId] = NULL,
+           [Code] = N'PL',
+           [Season] = 2024
+     WHERE [Id] = 1;
+END
+ELSE
+BEGIN
+    INSERT INTO [dbo].[Leagues]
+           ([Id], [Name], [SeasonStartDate], [SeasonEndDate], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [Code], [Season])
+    VALUES
+           (1, N'Premier League', CAST(N'2024-08-16T00:00:00.0000000' AS DateTime2), CAST(N'2025-05-25T00:00:00.0000000' AS DateTime2), N'https://crests.football-data.org/PL.png', 2021, NULL, N'PL', 2024);
+END
 GO
 SET IDENTITY_INSERT [dbo].[Leagues] OFF
 GO
