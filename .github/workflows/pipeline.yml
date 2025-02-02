@@ -46,10 +46,10 @@ jobs:
 
       - name: Build and push API image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-api:latest -f epl-squad-finder-api/EplSquadFinder.Api/Dockerfile ../
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-api:latest -f epl-squad-finder-api/EplSquadFinder.Api/Dockerfile epl-squad-finder-api/
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-api:latest
 
       - name: Build and push UI image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest -f epl-squad-finder-ui/Dockerfile ../
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest -f epl-squad-finder-ui/Dockerfile epl-squad-finder-ui/
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest
