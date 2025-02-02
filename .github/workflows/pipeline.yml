@@ -53,3 +53,20 @@ jobs:
         run: |
           docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest -f epl-squad-finder-ui/Dockerfile epl-squad-finder-ui/
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest
+
+  deploy_ui:
+    needs: build_and_push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy UI to Azure Container Apps
+        run: |
+          az containerapp update \
+            --name epl-squad-finder-ui \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --image ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest \
+            --cpu 0.25 --memory 512Mi
