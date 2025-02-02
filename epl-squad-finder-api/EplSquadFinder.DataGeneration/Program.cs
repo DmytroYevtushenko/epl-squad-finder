@@ -2,6 +2,7 @@
 using EplSquadFinder.Application.Abstractions;
 using EplSquadFinder.Application.Handlers.Commands.PopulateLeague;
 using EplSquadFinder.Infrastructure;
+using EplSquadFinder.Infrastructure.Data;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +13,8 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.Configuration
     .SetBasePath(AppContext.BaseDirectory)
-    .AddJsonFile("appsettings.json", false, true);
+    .AddJsonFile("appsettings.json", false, true)
+    .AddEnvironmentVariables();
 
 builder.AddInfrastructureServices();
 builder.AddApplicationServices();
@@ -20,7 +22,12 @@ builder.AddApplicationServices();
 var app = builder.Build();
 
 using var scope = app.Services.CreateScope();
-var dbContext = scope.ServiceProvider.GetRequiredService<IApplicationDbContext>();
+var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+Console.WriteLine("Applying migrations...");
+await dbContext.Database.MigrateAsync();
+Console.WriteLine("Migrations finished!");
+
 var sender = scope.ServiceProvider.GetRequiredService<ISender>();
 
 Console.WriteLine("Data generation started. Press ESC to exit.");
