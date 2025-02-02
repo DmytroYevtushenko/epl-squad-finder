@@ -30,7 +30,7 @@ jobs:
 
   build_and_push:
     needs: build_and_test
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' # Deploy only if code is already in main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -46,10 +46,10 @@ jobs:
 
       - name: Build and push API image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-api:latest -f epl-squad-finder-api/EplSquadFinder.Api/Dockerfile .
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-api:latest -f epl-squad-finder-api/EplSquadFinder.Api/Dockerfile ../
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-api:latest
 
       - name: Build and push UI image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest -f epl-squad-finder-ui/Dockerfile .
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest -f epl-squad-finder-ui/Dockerfile ../
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/epl-squad-finder-ui:latest
