@@ -28,6 +28,16 @@ Console.WriteLine("Applying migrations...");
 await dbContext.Database.MigrateAsync();
 Console.WriteLine("Migrations finished!");
 
+var config = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+var footballDataApiKey = config["ExternalApis:FootballData:ApiKey"];
+var apiFootballServiceApiKey = config["ExternalApis:ApiFootballService:ApiKey"];
+
+if (string.IsNullOrWhiteSpace(footballDataApiKey) || string.IsNullOrWhiteSpace(apiFootballServiceApiKey))
+{
+    Console.WriteLine("API keys are missing. Exiting...");
+    return;
+}
+
 var sender = scope.ServiceProvider.GetRequiredService<ISender>();
 
 Console.WriteLine("Data generation started. Press ESC to exit.");
