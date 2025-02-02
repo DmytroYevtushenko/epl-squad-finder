@@ -5,6 +5,7 @@
 
 .idea
 .vite
+dist/
 
 # User-specific files
 *.rsuser
