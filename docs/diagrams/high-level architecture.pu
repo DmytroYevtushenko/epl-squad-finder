@@ -1,0 +1,25 @@
+@startuml high_level_architecture
+skinparam BackgroundColor #F8F9FA
+skinparam ArrowColor #333333
+skinparam DefaultFontColor #333333
+skinparam RectangleFontColor white
+skinparam DatabaseFontColor white
+skinparam Shadowing false
+
+rectangle "API (Controllers, REST)" as API #1E3A8A
+rectangle "Application (Business Logic, Mediator)" as Application #16A34A
+rectangle "Infrastructure (EF, External APIs)" as Infrastructure #2563EB
+rectangle "Data Generation (Migrations, Fetching API Data)" as DataGen #D97706
+database "Database (MS SQL)" as DB #BE185D
+
+API -down-> Application 
+API -down-> Infrastructure
+
+DataGen -down-> Application 
+DataGen -down-> Infrastructure
+
+Infrastructure -down-> DB : SQL Queries
+Infrastructure -up-> Application : Implementations (Repositories, API Clients)
+
+title Domain-Centric Architecture (EPL Squad Finder)
+@enduml

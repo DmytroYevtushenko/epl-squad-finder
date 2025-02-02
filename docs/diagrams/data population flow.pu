@@ -1,0 +1,23 @@
+@startuml data_population_flow
+title Data Fetching & Matching Sequence
+
+participant "Data Generation Service" as DGS
+participant "Football-Data API" as FDA
+participant "API-Football" as APIF
+database "Database (MS SQL)" as DB
+
+DGS -> DB: Fetch existing leagues
+
+DGS -> FDA: GET /competitions/{leagueCode}/teams?season={season}
+FDA --> DGS: Return teams with country info
+
+DGS -> APIF: GET /teams?country={country}
+APIF --> DGS: Return teams for country
+
+loop For each team
+    DGS -> APIF: GET /players/squads?team={teamId}
+    APIF --> DGS: Return squad details
+
+    DGS -> DB: Store team & players
+end loop
+@enduml
