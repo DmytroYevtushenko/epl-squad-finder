@@ -1,3 +1,6 @@
+SET QUOTED_IDENTIFIER ON;
+GO
+
 SET IDENTITY_INSERT [dbo].[Leagues] ON 
 GO
 IF EXISTS (SELECT 1 FROM [dbo].[Leagues] WHERE [Id] = 1)
@@ -23,6 +26,50 @@ END
 GO
 SET IDENTITY_INSERT [dbo].[Leagues] OFF
 GO
+
+SET IDENTITY_INSERT [dbo].[Teams] ON 
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (14, N'Arsenal FC', N'Arsenal', N'http://www.arsenal.com/', N'https://crests.football-data.org/57.png', 57, 42, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (15, N'Aston Villa FC', N'Aston Villa', N'http://www.avfc.co.uk/', N'https://crests.football-data.org/58.png', 58, 66, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (16, N'Chelsea FC', N'Chelsea', N'http://www.chelseafc.com/', N'https://crests.football-data.org/61.png', 61, 49, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (17, N'Everton FC', N'Everton', N'http://www.evertonfc.com/', N'https://crests.football-data.org/62.png', 62, 45, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (18, N'Fulham FC', N'Fulham', N'http://www.fulhamfc.com/', N'https://crests.football-data.org/63.png', 63, 36, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (19, N'Liverpool FC', N'Liverpool', N'http://www.liverpoolfc.tv/', N'https://crests.football-data.org/64.png', 64, 40, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (20, N'Manchester City FC', N'Man City', N'https://www.mancity.com/', N'https://crests.football-data.org/65.png', 65, 50, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (21, N'Manchester United FC', N'Man United', N'http://www.manutd.com/', N'https://crests.football-data.org/66.png', 66, 33, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (22, N'Newcastle United FC', N'Newcastle', N'http://www.nufc.co.uk/', N'https://crests.football-data.org/67.png', 67, 34, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (23, N'Tottenham Hotspur FC', N'Tottenham', N'http://www.tottenhamhotspur.com/', N'https://crests.football-data.org/73.png', 73, 47, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (24, N'Wolverhampton Wanderers FC', N'Wolverhampton', N'http://www.wolves.co.uk/', N'https://crests.football-data.org/76.png', 76, 39, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (25, N'Leicester City FC', N'Leicester City', N'http://www.lcfc.com/', N'https://crests.football-data.org/338.png', 338, 46, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (26, N'Southampton FC', N'Southampton', N'http://www.saintsfc.co.uk/', N'https://crests.football-data.org/340.png', 340, 41, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (27, N'Ipswich Town FC', N'Ipswich Town', N'http://www.itfc.co.uk/', N'https://crests.football-data.org/349.png', 349, 57, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (28, N'Nottingham Forest FC', N'Nottingham', N'http://www.nottinghamforest.co.uk/', N'https://crests.football-data.org/351.png', 351, 65, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (29, N'Crystal Palace FC', N'Crystal Palace', N'http://www.cpfc.co.uk/', N'https://crests.football-data.org/354.png', 354, 52, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (30, N'Brentford FC', N'Brentford', N'http://www.brentfordfc.co.uk/', N'https://crests.football-data.org/402.png', 402, 55, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (31, N'West Ham United FC', N'West Ham', N'http://www.whufc.com/', N'https://crests.football-data.org/563.png', 563, 48, 1)
+GO
+INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (32, N'AFC Bournemouth', N'Bournemouth', N'http://www.afcb.co.uk/', N'https://crests.football-data.org/bournemouth.png', 1044, 35, 1)
+GO
+SET IDENTITY_INSERT [dbo].[Teams] OFF
+GO
+
 SET IDENTITY_INSERT [dbo].[Players] ON 
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (457, N'David', N'Raya', N'Goalkeeper', CAST(N'1995-09-15T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/19465.png', 19465, 4832, 14, 30)
@@ -63,7 +110,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (475, N'Thomas', N'Partey', N'Defensive Midfield', CAST(N'1993-06-13T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/49.png', 49, 110, 14, 32)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (476, N'Martin', N'Ødegaard', N'Attacking Midfield', CAST(N'1998-12-17T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/37127.png', 37127, 7427, 14, 27)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (476, N'Martin', N'?degaard', N'Attacking Midfield', CAST(N'1998-12-17T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/37127.png', 37127, 7427, 14, 27)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (477, N'Jorginho', N'Jorginho', N'Defensive Midfield', CAST(N'1991-12-20T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/2289.png', 2289, 2094, 14, 34)
 GO
@@ -95,7 +142,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (491, N'Joe', N'Gauci', N'Goalkeeper', CAST(N'2000-07-04T00:00:00.0000000' AS DateTime2), 18, N'https://media.api-sports.io/football/players/7029.png', 7029, 81871, 15, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (492, N'Emiliano', N'Martínez', N'Goalkeeper', CAST(N'1992-09-02T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/19599.png', 19599, 3141, 15, 33)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (492, N'Emiliano', N'Mart?nez', N'Goalkeeper', CAST(N'1992-09-02T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/19599.png', 19599, 3141, 15, 33)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (493, N'Robin', N'Olsen', N'Goalkeeper', CAST(N'1990-01-08T00:00:00.0000000' AS DateTime2), 25, N'https://media.api-sports.io/football/players/766.png', 766, 15512, 15, 35)
 GO
@@ -111,7 +158,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (499, N'Pau', N'Torres', N'Centre-Back', CAST(N'1997-01-16T00:00:00.0000000' AS DateTime2), 14, N'https://media.api-sports.io/football/players/46815.png', 46815, 33109, 15, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (500, N'Kosta', N'Nedeljković', N'Right-Back', CAST(N'2005-12-16T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/342320.png', 342320, 217929, 15, 20)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (500, N'Kosta', N'Nedeljkovi?', N'Right-Back', CAST(N'2005-12-16T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/342320.png', 342320, 217929, 15, 20)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (501, N'Ian', N'Maatsen', N'Left-Back', CAST(N'2002-03-10T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/138816.png', 138816, 131120, 15, 23)
 GO
@@ -133,7 +180,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (510, N'Youri', N'Tielemans', N'Central Midfield', CAST(N'1997-05-07T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/2926.png', 2926, 3658, 15, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (511, N'E.', N'Buendía', N'Midfielder', NULL, 10, N'https://media.api-sports.io/football/players/19071.png', 19071, NULL, 15, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (511, N'E.', N'Buend?a', N'Midfielder', NULL, 10, N'https://media.api-sports.io/football/players/19071.png', 19071, NULL, 15, 29)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (512, N'Amadou', N'Onana', N'Defensive Midfield', CAST(N'2001-08-16T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/162714.png', 162714, 114024, 15, 24)
 GO
@@ -151,7 +198,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (519, N'Bradley', N'Burrowes', N'Midfield', CAST(N'2008-03-04T00:00:00.0000000' AS DateTime2), 83, N'https://media.api-sports.io/football/players/453101.png', 453101, 274024, 15, 17)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (520, N'J.', N'Durán', N'Attacker', NULL, 9, N'https://media.api-sports.io/football/players/13489.png', 13489, NULL, 15, 22)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (520, N'J.', N'Dur?n', N'Attacker', NULL, 9, N'https://media.api-sports.io/football/players/13489.png', 13489, NULL, 15, 22)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (521, N'Ollie', N'Watkins', N'Centre-Forward', CAST(N'1995-12-30T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/19366.png', 19366, 4444, 15, 30)
 GO
@@ -163,15 +210,15 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (525, N'Kobei', N'Moore', N'Attacker', NULL, 77, N'https://media.api-sports.io/football/players/305736.png', 305736, NULL, 15, 21)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (526, N'Andrés', N'Garcia', N'Defence', CAST(N'2003-02-07T00:00:00.0000000' AS DateTime2), NULL, N'https://media.api-sports.io/football/players/388013.png', 388013, 203594, 15, 22)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (526, N'Andr?s', N'Garcia', N'Defence', CAST(N'2003-02-07T00:00:00.0000000' AS DateTime2), NULL, N'https://media.api-sports.io/football/players/388013.png', 388013, 203594, 15, 22)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (527, N'Robert', N'Sánchez', N'Goalkeeper', CAST(N'1997-11-18T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/18959.png', 18959, 135555, 16, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (527, N'Robert', N'S?nchez', N'Goalkeeper', CAST(N'1997-11-18T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/18959.png', 18959, 135555, 16, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (528, N'Filip', N'Jörgensen', N'Goalkeeper', CAST(N'2002-04-16T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/286616.png', 286616, 153828, 16, 23)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (528, N'Filip', N'J?rgensen', N'Goalkeeper', CAST(N'2002-04-16T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/286616.png', 286616, 153828, 16, 23)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (529, N'Marcus', N'Bettinelli', N'Goalkeeper', CAST(N'1992-05-24T00:00:00.0000000' AS DateTime2), 13, N'https://media.api-sports.io/football/players/19012.png', 19012, 3953, 16, 33)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (530, N'Lucas', N'Bergström', N'Goalkeeper', CAST(N'2002-09-05T00:00:00.0000000' AS DateTime2), 47, N'https://media.api-sports.io/football/players/152955.png', 152955, 179663, 16, 23)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (530, N'Lucas', N'Bergstr?m', N'Goalkeeper', CAST(N'2002-09-05T00:00:00.0000000' AS DateTime2), 47, N'https://media.api-sports.io/football/players/152955.png', 152955, 179663, 16, 23)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (531, N'E.', N'Beach', N'Goalkeeper', NULL, NULL, N'https://media.api-sports.io/football/players/303667.png', 303667, NULL, 16, 22)
 GO
@@ -181,7 +228,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (534, N'Tosin', N'Adarabioyo', N'Centre-Back', CAST(N'1997-09-24T00:00:00.0000000' AS DateTime2), 4, N'https://media.api-sports.io/football/players/19145.png', 19145, 7880, 16, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (535, N'Benoît', N'Badiashile', N'Centre-Back', CAST(N'2001-03-26T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/95.png', 95, 170426, 16, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (535, N'Beno?t', N'Badiashile', N'Centre-Back', CAST(N'2001-03-26T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/95.png', 95, 170426, 16, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (536, N'Levi', N'Colwill', N'Centre-Back', CAST(N'2003-02-26T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/152953.png', 152953, 170440, 16, 22)
 GO
@@ -205,7 +252,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (546, N'A.', N'Anselmino', N'Defender', NULL, NULL, N'https://media.api-sports.io/football/players/422780.png', 422780, NULL, 16, 20)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (547, N'Enzo', N'Fernández', N'Central Midfield', CAST(N'2001-01-17T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/5996.png', 5996, 102603, 16, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (547, N'Enzo', N'Fern?ndez', N'Central Midfield', CAST(N'2001-01-17T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/5996.png', 5996, 102603, 16, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (548, N'Mykhailo', N'Mudryk', N'Left Winger', CAST(N'2001-01-05T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/63577.png', 63577, 98978, 16, 24)
 GO
@@ -215,7 +262,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (551, N'Kiernan', N'Hall', N'Central Midfield', CAST(N'1998-09-06T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/148099.png', 148099, 140194, 16, 27)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (552, N'Moisés', N'Caicedo', N'Defensive Midfield', CAST(N'2001-11-02T00:00:00.0000000' AS DateTime2), 25, N'https://media.api-sports.io/football/players/116117.png', 116117, 121103, 16, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (552, N'Mois?s', N'Caicedo', N'Defensive Midfield', CAST(N'2001-11-02T00:00:00.0000000' AS DateTime2), 25, N'https://media.api-sports.io/football/players/116117.png', 116117, 121103, 16, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (553, N'Cesare', N'Casadei', N'Central Midfield', CAST(N'2003-01-10T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/270507.png', 270507, 179558, 16, 22)
 GO
@@ -235,7 +282,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (561, N'Noni', N'Madueke', N'Right Winger', CAST(N'2002-03-10T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/136723.png', 136723, 167720, 16, 23)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (562, N'João', N'Félix', N'Offence', CAST(N'1999-11-10T00:00:00.0000000' AS DateTime2), 14, N'https://media.api-sports.io/football/players/583.png', 583, 39265, 16, 26)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (562, N'Jo?o', N'F?lix', N'Offence', CAST(N'1999-11-10T00:00:00.0000000' AS DateTime2), 14, N'https://media.api-sports.io/football/players/583.png', 583, 39265, 16, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (563, N'Nicolas', N'Jackson', N'Centre-Forward', CAST(N'2001-06-20T00:00:00.0000000' AS DateTime2), 15, N'https://media.api-sports.io/football/players/283058.png', 283058, 152515, 16, 24)
 GO
@@ -255,11 +302,11 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (571, N'Jordan', N'Pickford', N'Goalkeeper', CAST(N'1994-03-07T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/2932.png', 2932, 3309, 17, 31)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (572, N'João', N'Virgínia', N'Goalkeeper', CAST(N'1999-10-10T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/18755.png', 18755, 82207, 17, 26)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (572, N'Jo?o', N'Virg?nia', N'Goalkeeper', CAST(N'1999-10-10T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/18755.png', 18755, 82207, 17, 26)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (573, N'Asmir', N'Begović', N'Goalkeeper', CAST(N'1987-06-20T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/18858.png', 18858, 8229, 17, 38)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (573, N'Asmir', N'Begovi?', N'Goalkeeper', CAST(N'1987-06-20T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/18858.png', 18858, 8229, 17, 38)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (574, N'Žan', N'Leban', N'Goalkeeper', CAST(N'2002-12-15T00:00:00.0000000' AS DateTime2), 63, N'https://media.api-sports.io/football/players/284326.png', 284326, 274005, 17, 23)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (574, N'?an', N'Leban', N'Goalkeeper', CAST(N'2002-12-15T00:00:00.0000000' AS DateTime2), 63, N'https://media.api-sports.io/football/players/284326.png', 284326, 274005, 17, 23)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (575, N'Nathan', N'Patterson', N'Right-Back', CAST(N'2001-10-16T00:00:00.0000000' AS DateTime2), 2, N'https://media.api-sports.io/football/players/138417.png', 138417, 138174, 17, 24)
 GO
@@ -273,7 +320,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (580, N'Vitalii', N'Mykolenko', N'Left-Back', CAST(N'1999-05-29T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/2165.png', 2165, 16165, 17, 26)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (581, N'Séamus', N'Coleman', N'Right-Back', CAST(N'1988-10-11T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/18758.png', 18758, 7836, 17, 37)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (581, N'S?amus', N'Coleman', N'Right-Back', CAST(N'1988-10-11T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/18758.png', 18758, 7836, 17, 37)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (582, N'Jarrad', N'Branthwaite', N'Centre-Back', CAST(N'2002-06-27T00:00:00.0000000' AS DateTime2), 32, N'https://media.api-sports.io/football/players/17661.png', 17661, 114120, 17, 23)
 GO
@@ -283,11 +330,11 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (585, N'Orel', N'Mangala', N'Defensive Midfield', CAST(N'1998-03-18T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/24882.png', 24882, 9398, 17, 27)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (586, N'Abdoulaye', N'Doucouré', N'Central Midfield', CAST(N'1993-01-01T00:00:00.0000000' AS DateTime2), 16, N'https://media.api-sports.io/football/players/18805.png', 18805, 8119, 17, 32)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (586, N'Abdoulaye', N'Doucour?', N'Central Midfield', CAST(N'1993-01-01T00:00:00.0000000' AS DateTime2), 16, N'https://media.api-sports.io/football/players/18805.png', 18805, 8119, 17, 32)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (587, N'Idrissa', N'Guèye', N'Central Midfield', CAST(N'1989-09-26T00:00:00.0000000' AS DateTime2), 27, N'https://media.api-sports.io/football/players/2990.png', 2990, 3627, 17, 36)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (587, N'Idrissa', N'Gu?ye', N'Central Midfield', CAST(N'1989-09-26T00:00:00.0000000' AS DateTime2), 27, N'https://media.api-sports.io/football/players/2990.png', 2990, 3627, 17, 36)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (588, N'Jesper', N'Lindstrøm', N'Right Winger', CAST(N'2000-02-29T00:00:00.0000000' AS DateTime2), 29, N'https://media.api-sports.io/football/players/15884.png', 15884, 81973, 17, 25)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (588, N'Jesper', N'Lindstr?m', N'Right Winger', CAST(N'2000-02-29T00:00:00.0000000' AS DateTime2), 29, N'https://media.api-sports.io/football/players/15884.png', 15884, 81973, 17, 25)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (589, N'James', N'Garner', N'Defensive Midfield', CAST(N'2001-03-13T00:00:00.0000000' AS DateTime2), 37, N'https://media.api-sports.io/football/players/895.png', 895, 101076, 17, 24)
 GO
@@ -349,7 +396,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (618, N'Andreas', N'Pereira', N'Attacking Midfield', CAST(N'1996-01-01T00:00:00.0000000' AS DateTime2), 18, N'https://media.api-sports.io/football/players/899.png', 899, 33153, 18, 29)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (619, N'Saša', N'Lukić', N'Central Midfield', CAST(N'1996-08-13T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/2823.png', 2823, 32938, 18, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (619, N'Sa?a', N'Luki?', N'Central Midfield', CAST(N'1996-08-13T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/2823.png', 2823, 32938, 18, 29)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (620, N'Joshua', N'King', N'Central Midfield', CAST(N'2007-01-03T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/389315.png', 389315, 246418, 18, 18)
 GO
@@ -357,13 +404,13 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (622, N'Emile', N'Rowe', N'Attacking Midfield', CAST(N'2000-07-28T00:00:00.0000000' AS DateTime2), 32, N'https://media.api-sports.io/football/players/1161.png', 1161, 85570, 18, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (623, N'Raúl', N'Jiménez', N'Centre-Forward', CAST(N'1991-05-05T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/2887.png', 2887, 3305, 18, 34)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (623, N'Ra?l', N'Jim?nez', N'Centre-Forward', CAST(N'1991-05-05T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/2887.png', 2887, 3305, 18, 34)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (624, N'Rodrigo', N'Muniz', N'Centre-Forward', CAST(N'2001-05-04T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/195106.png', 195106, 138036, 18, 24)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (625, N'Adama', N'Traoré', N'Right Winger', CAST(N'1996-01-25T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/18753.png', 18753, 4221, 18, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (625, N'Adama', N'Traor?', N'Right Winger', CAST(N'1996-01-25T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/18753.png', 18753, 4221, 18, 29)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (626, N'Carlos', N'Vinícius', N'Centre-Forward', CAST(N'1995-03-25T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/104.png', 104, 37833, 18, 30)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (626, N'Carlos', N'Vin?cius', N'Centre-Forward', CAST(N'1995-03-25T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/104.png', 104, 37833, 18, 30)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (627, N'Alex', N'Iwobi', N'Left Winger', CAST(N'1996-05-03T00:00:00.0000000' AS DateTime2), 17, N'https://media.api-sports.io/football/players/1455.png', 1455, 3392, 18, 29)
 GO
@@ -373,7 +420,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (630, N'Alisson', N'Alisson', N'Goalkeeper', CAST(N'1992-10-02T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/280.png', 280, 1795, 19, 33)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (631, N'Vítězslav', N'Jaroš', N'Goalkeeper', CAST(N'2001-07-23T00:00:00.0000000' AS DateTime2), 56, N'https://media.api-sports.io/football/players/162687.png', 162687, 152579, 19, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (631, N'V?t?zslav', N'Jaro?', N'Goalkeeper', CAST(N'2001-07-23T00:00:00.0000000' AS DateTime2), 56, N'https://media.api-sports.io/football/players/162687.png', 162687, 152579, 19, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (632, N'Caoimhin', N'Kelleher', N'Goalkeeper', CAST(N'1998-11-23T00:00:00.0000000' AS DateTime2), 62, N'https://media.api-sports.io/football/players/281.png', 281, 102046, 19, 27)
 GO
@@ -383,7 +430,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (635, N'Virgil', N'Dijk', N'Centre-Back', CAST(N'1991-07-08T00:00:00.0000000' AS DateTime2), 4, N'https://media.api-sports.io/football/players/290.png', 290, 7869, 19, 34)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (636, N'Ibrahima', N'Konaté', N'Centre-Back', CAST(N'1999-05-25T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/1145.png', 1145, 9542, 19, 26)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (636, N'Ibrahima', N'Konat?', N'Centre-Back', CAST(N'1999-05-25T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/1145.png', 1145, 9542, 19, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (637, N'Kostas', N'Tsimikas', N'Left-Back', CAST(N'1996-05-12T00:00:00.0000000' AS DateTime2), 21, N'https://media.api-sports.io/football/players/1600.png', 1600, 7383, 19, 29)
 GO
@@ -417,9 +464,9 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (652, N'Trey', N'Nyoni', N'Attacking Midfield', CAST(N'2007-06-30T00:00:00.0000000' AS DateTime2), 98, N'https://media.api-sports.io/football/players/397997.png', 397997, 230517, 19, 18)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (653, N'Luis', N'Díaz', N'Left Winger', CAST(N'1997-01-13T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/2489.png', 2489, 22396, 19, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (653, N'Luis', N'D?az', N'Left Winger', CAST(N'1997-01-13T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/2489.png', 2489, 22396, 19, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (654, N'Darwin', N'Núñez', N'Centre-Forward', CAST(N'1999-06-24T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/51617.png', 51617, 28612, 19, 26)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (654, N'Darwin', N'N??ez', N'Centre-Forward', CAST(N'1999-06-24T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/51617.png', 51617, 28612, 19, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (655, N'Mohamed', N'Salah', N'Right Winger', CAST(N'1992-06-15T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/306.png', 306, 3754, 19, 33)
 GO
@@ -447,15 +494,15 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (667, N'K.', N'Walker', N'Defender', NULL, 2, N'https://media.api-sports.io/football/players/627.png', 627, NULL, 20, 35)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (668, N'Rúben', N'Dias', N'Centre-Back', CAST(N'1997-05-14T00:00:00.0000000' AS DateTime2), 3, N'https://media.api-sports.io/football/players/567.png', 567, 10183, 20, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (668, N'R?ben', N'Dias', N'Centre-Back', CAST(N'1997-05-14T00:00:00.0000000' AS DateTime2), 3, N'https://media.api-sports.io/football/players/567.png', 567, 10183, 20, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (669, N'John', N'Stones', N'Centre-Back', CAST(N'1994-05-28T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/626.png', 626, 3313, 20, 31)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (670, N'Nathan', N'Aké', N'Centre-Back', CAST(N'1995-02-18T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/18861.png', 18861, 8240, 20, 30)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (670, N'Nathan', N'Ak?', N'Centre-Back', CAST(N'1995-02-18T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/18861.png', 18861, 8240, 20, 30)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (671, N'Vitor', N'Reis', N'Defence', CAST(N'2006-01-12T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/414359.png', 414359, 249196, 20, 19)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (672, N'Joško', N'Gvardiol', N'Left-Back', CAST(N'2002-01-23T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/129033.png', 129033, 122266, 20, 23)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (672, N'Jo?ko', N'Gvardiol', N'Left-Back', CAST(N'2002-01-23T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/129033.png', 129033, 122266, 20, 23)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (673, N'Manuel', N'Akanji', N'Centre-Back', CAST(N'1995-07-19T00:00:00.0000000' AS DateTime2), 25, N'https://media.api-sports.io/football/players/5.png', 5, 143, 20, 30)
 GO
@@ -467,7 +514,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (677, N'Rico', N'Lewis', N'Right-Back', CAST(N'2004-11-21T00:00:00.0000000' AS DateTime2), 82, N'https://media.api-sports.io/football/players/284230.png', 284230, 187202, 20, 21)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (678, N'Mateo', N'Kovačić', N'Central Midfield', CAST(N'1994-05-06T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/2291.png', 2291, 65, 20, 31)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (678, N'Mateo', N'Kova?i?', N'Central Midfield', CAST(N'1994-05-06T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/2291.png', 2291, 65, 20, 31)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (679, N'Jack', N'Grealish', N'Left Winger', CAST(N'1995-09-10T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/19187.png', 19187, 3895, 20, 30)
 GO
@@ -475,7 +522,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (681, N'Kevin', N'Bruyne', N'Attacking Midfield', CAST(N'1991-06-28T00:00:00.0000000' AS DateTime2), 17, N'https://media.api-sports.io/football/players/629.png', 629, 3654, 20, 34)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (682, N'Ilkay', N'Gündogan', N'Central Midfield', CAST(N'1990-10-24T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/633.png', 633, 3182, 20, 35)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (682, N'Ilkay', N'G?ndogan', N'Central Midfield', CAST(N'1990-10-24T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/633.png', 633, 3182, 20, 35)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (683, N'Bernardo', N'Silva', N'Attacking Midfield', CAST(N'1994-08-10T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/636.png', 636, 3254, 20, 31)
 GO
@@ -501,17 +548,17 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (694, N'Jeremy', N'Doku', N'Left Winger', CAST(N'2002-05-27T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/1422.png', 1422, 99775, 20, 23)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (695, N'Sávio', N'Sávio', N'Right Winger', CAST(N'2004-04-10T00:00:00.0000000' AS DateTime2), 26, N'https://media.api-sports.io/football/players/266657.png', 266657, 146352, 20, 21)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (695, N'S?vio', N'S?vio', N'Right Winger', CAST(N'2004-04-10T00:00:00.0000000' AS DateTime2), 26, N'https://media.api-sports.io/football/players/266657.png', 266657, 146352, 20, 21)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (696, N'Divin', N'Mubama', N'Centre-Forward', CAST(N'2004-10-25T00:00:00.0000000' AS DateTime2), 67, N'https://media.api-sports.io/football/players/284409.png', 284409, 187380, 20, 21)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (697, N'Altay', N'Bayındır', N'Goalkeeper', CAST(N'1998-04-14T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/50132.png', 50132, 29518, 21, 27)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (697, N'Altay', N'Bay?nd?r', N'Goalkeeper', CAST(N'1998-04-14T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/50132.png', 50132, 29518, 21, 27)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (698, N'Tom', N'Heaton', N'Goalkeeper', CAST(N'1986-04-15T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/2931.png', 2931, 8035, 21, 39)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (699, N'André', N'Onana', N'Goalkeeper', CAST(N'1996-04-02T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/526.png', 526, 7544, 21, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (699, N'Andr?', N'Onana', N'Goalkeeper', CAST(N'1996-04-02T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/526.png', 526, 7544, 21, 29)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (700, N'Victor', N'Nilsson-Lindelöf', N'Centre-Back', CAST(N'1994-07-17T00:00:00.0000000' AS DateTime2), 2, N'https://media.api-sports.io/football/players/889.png', 889, 3492, 21, 31)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (700, N'Victor', N'Nilsson-Lindel?f', N'Centre-Back', CAST(N'1994-07-17T00:00:00.0000000' AS DateTime2), 2, N'https://media.api-sports.io/football/players/889.png', 889, 3492, 21, 31)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (701, N'Noussair', N'Mazraoui', N'Right-Back', CAST(N'1997-11-14T00:00:00.0000000' AS DateTime2), 3, N'https://media.api-sports.io/football/players/545.png', 545, 7553, 21, 28)
 GO
@@ -519,7 +566,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (703, N'Harry', N'Maguire', N'Centre-Back', CAST(N'1993-03-05T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/2935.png', 2935, 3326, 21, 32)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (704, N'Lisandro', N'Martínez', N'Centre-Back', CAST(N'1998-01-18T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/2467.png', 2467, 46451, 21, 27)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (704, N'Lisandro', N'Mart?nez', N'Centre-Back', CAST(N'1998-01-18T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/2467.png', 2467, 46451, 21, 27)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (705, N'Tyrell', N'Malacia', N'Left-Back', CAST(N'1999-08-17T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/37145.png', 37145, 7467, 21, 26)
 GO
@@ -557,7 +604,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (722, N'Jayce', N'Fitzgerald', N'Midfield', CAST(N'2007-05-09T00:00:00.0000000' AS DateTime2), 76, N'https://media.api-sports.io/football/players/389031.png', 389031, 272305, 21, 18)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (723, N'Rasmus', N'Højlund', N'Centre-Forward', CAST(N'2003-02-04T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/288006.png', 288006, 152770, 21, 22)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (723, N'Rasmus', N'H?jlund', N'Centre-Forward', CAST(N'2003-02-04T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/288006.png', 288006, 152770, 21, 22)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (724, N'Marcus', N'Rashford', N'Left Winger', CAST(N'1997-10-31T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/909.png', 909, 3331, 21, 28)
 GO
@@ -571,7 +618,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (729, N'E.', N'Wheatley', N'Attacker', NULL, 36, N'https://media.api-sports.io/football/players/362270.png', 362270, NULL, 21, 19)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (730, N'Martin', N'Dúbravka', N'Goalkeeper', CAST(N'1989-01-15T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/18886.png', 18886, 7914, 22, 36)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (730, N'Martin', N'D?bravka', N'Goalkeeper', CAST(N'1989-01-15T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/18886.png', 18886, 7914, 22, 36)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (731, N'Odisseas', N'Vlachodimos', N'Goalkeeper', CAST(N'1994-04-26T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/557.png', 557, 42871, 22, 31)
 GO
@@ -585,7 +632,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (736, N'Sven', N'Botman', N'Centre-Back', CAST(N'2000-01-12T00:00:00.0000000' AS DateTime2), 4, N'https://media.api-sports.io/football/players/38734.png', 38734, 81082, 22, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (737, N'Fabian', N'Schär', N'Centre-Back', CAST(N'1991-12-20T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/2806.png', 2806, 88, 22, 34)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (737, N'Fabian', N'Sch?r', N'Centre-Back', CAST(N'1991-12-20T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/2806.png', 2806, 88, 22, 34)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (738, N'J.', N'Lascelles', N'Defender', NULL, 6, N'https://media.api-sports.io/football/players/18894.png', 18894, NULL, 22, 32)
 GO
@@ -609,13 +656,13 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (748, N'Jacob', N'Murphy', N'Right Winger', CAST(N'1995-02-24T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/19163.png', 19163, 7934, 22, 30)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (749, N'M.', N'Almirón', N'Midfielder', NULL, 24, N'https://media.api-sports.io/football/players/2507.png', 2507, NULL, 22, 31)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (749, N'M.', N'Almir?n', N'Midfielder', NULL, 24, N'https://media.api-sports.io/football/players/2507.png', 2507, NULL, 22, 31)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (750, N'Joe', N'Willock', N'Central Midfield', CAST(N'1999-08-20T00:00:00.0000000' AS DateTime2), 28, N'https://media.api-sports.io/football/players/1463.png', 1463, 7798, 22, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (751, N'Sean', N'Longstaff', N'Central Midfield', CAST(N'1997-10-30T00:00:00.0000000' AS DateTime2), 36, N'https://media.api-sports.io/football/players/18901.png', 18901, 4955, 22, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (752, N'Bruno', N'Guimarães', N'Defensive Midfield', CAST(N'1997-11-16T00:00:00.0000000' AS DateTime2), 39, N'https://media.api-sports.io/football/players/10135.png', 10135, 1684, 22, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (752, N'Bruno', N'Guimar?es', N'Defensive Midfield', CAST(N'1997-11-16T00:00:00.0000000' AS DateTime2), 39, N'https://media.api-sports.io/football/players/10135.png', 10135, 1684, 22, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (753, N'L.', N'Miley', N'Midfielder', NULL, 67, N'https://media.api-sports.io/football/players/328105.png', 328105, NULL, 22, 19)
 GO
@@ -635,15 +682,15 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (761, N'Fraser', N'Forster', N'Goalkeeper', CAST(N'1988-03-17T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/18932.png', 18932, 8079, 23, 37)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (762, N'Antonín', N'Kinský', N'Goalkeeper', CAST(N'2003-03-13T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/265826.png', 265826, 255239, 23, 22)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (762, N'Anton?n', N'Kinsk?', N'Goalkeeper', CAST(N'2003-03-13T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/265826.png', 265826, 255239, 23, 22)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (763, N'Brandon', N'Austin', N'Goalkeeper', CAST(N'1999-01-08T00:00:00.0000000' AS DateTime2), 40, N'https://media.api-sports.io/football/players/156428.png', 156428, 133229, 23, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (764, N'Alfie', N'Whiteman', N'Goalkeeper', CAST(N'1998-10-02T00:00:00.0000000' AS DateTime2), 41, N'https://media.api-sports.io/football/players/161.png', 161, 7992, 23, 27)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (765, N'Reguilón', N'Reguilón', N'Left-Back', CAST(N'1996-12-16T00:00:00.0000000' AS DateTime2), 3, N'https://media.api-sports.io/football/players/739.png', 739, 51116, 23, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (765, N'Reguil?n', N'Reguil?n', N'Left-Back', CAST(N'1996-12-16T00:00:00.0000000' AS DateTime2), 3, N'https://media.api-sports.io/football/players/739.png', 739, 51116, 23, 29)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (766, N'Radu', N'Drăgușin', N'Centre-Back', CAST(N'2002-02-03T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/162498.png', 162498, 140432, 23, 23)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (766, N'Radu', N'Dr?gu?in', N'Centre-Back', CAST(N'2002-02-03T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/162498.png', 162498, 140432, 23, 23)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (767, N'Destiny', N'Udogie', N'Left-Back', CAST(N'2002-11-28T00:00:00.0000000' AS DateTime2), 13, N'https://media.api-sports.io/football/players/204039.png', 204039, 170378, 23, 23)
 GO
@@ -699,7 +746,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (793, N'Dane', N'Scarlett', N'Centre-Forward', CAST(N'2004-03-24T00:00:00.0000000' AS DateTime2), NULL, N'https://media.api-sports.io/football/players/162552.png', 162552, 156616, 23, 21)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (794, N'José', N'Sá', N'Goalkeeper', CAST(N'1993-01-17T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/1590.png', 1590, 15899, 24, 32)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (794, N'Jos?', N'S?', N'Goalkeeper', CAST(N'1993-01-17T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/1590.png', 1590, 15899, 24, 32)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (795, N'Daniel', N'Bentley', N'Goalkeeper', CAST(N'1993-07-13T00:00:00.0000000' AS DateTime2), 25, N'https://media.api-sports.io/football/players/19341.png', 19341, 4418, 24, 32)
 GO
@@ -719,7 +766,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (803, N'Craig', N'Dawson', N'Centre-Back', CAST(N'1990-05-06T00:00:00.0000000' AS DateTime2), 15, N'https://media.api-sports.io/football/players/19147.png', 19147, 8012, 24, 35)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (804, N'Nélson', N'Semedo', N'Right-Back', CAST(N'1993-11-16T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/130.png', 130, 15862, 24, 32)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (804, N'N?lson', N'Semedo', N'Right-Back', CAST(N'1993-11-16T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/130.png', 130, 15862, 24, 32)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (805, N'Toti', N'Gomes', N'Centre-Back', CAST(N'1999-01-16T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/41606.png', 41606, 102223, 24, 26)
 GO
@@ -733,11 +780,11 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (810, N'Mario', N'Lemina', N'Defensive Midfield', CAST(N'1993-09-01T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/18947.png', 18947, 8097, 24, 32)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (811, N'Boubacar', N'Traoré', N'Defensive Midfield', CAST(N'2001-08-20T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/157912.png', 157912, 133553, 24, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (811, N'Boubacar', N'Traor?', N'Defensive Midfield', CAST(N'2001-08-20T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/157912.png', 157912, 133553, 24, 24)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (812, N'André', N'André', N'Defensive Midfield', CAST(N'2001-07-16T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/265784.png', 265784, 145538, 24, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (812, N'Andr?', N'Andr?', N'Defensive Midfield', CAST(N'2001-07-16T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/265784.png', 265784, 145538, 24, 24)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (813, N'João', N'Gomes', N'Central Midfield', CAST(N'2001-02-12T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/195103.png', 195103, 138034, 24, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (813, N'Jo?o', N'Gomes', N'Central Midfield', CAST(N'2001-02-12T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/195103.png', 195103, 138034, 24, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (814, N'Tommy', N'Doyle', N'Central Midfield', CAST(N'2001-10-17T00:00:00.0000000' AS DateTime2), 20, N'https://media.api-sports.io/football/players/144732.png', 144732, 172581, 24, 24)
 GO
@@ -751,19 +798,19 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (819, N'Luke', N'Rawlings', N'Midfield', NULL, 62, N'https://media.api-sports.io/football/players/401098.png', 401098, 265562, 24, 17)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (820, N'Jørgen', N'Larsen', N'Offence', CAST(N'2000-02-06T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/2032.png', 2032, 213269, 24, 25)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (820, N'J?rgen', N'Larsen', N'Offence', CAST(N'2000-02-06T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/2032.png', 2032, 213269, 24, 25)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (821, N'Matheus', N'Cunha', N'Centre-Forward', CAST(N'1999-05-27T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/1165.png', 1165, 30842, 24, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (822, N'Hwang', N'Heechan', N'Centre-Forward', CAST(N'1996-01-26T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/24888.png', 24888, 3354, 24, 29)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (823, N'Saša', N'Kalajdžić', N'Centre-Forward', CAST(N'1997-07-07T00:00:00.0000000' AS DateTime2), 18, N'https://media.api-sports.io/football/players/7722.png', 7722, 10761, 24, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (823, N'Sa?a', N'Kalajd?i?', N'Centre-Forward', CAST(N'1997-07-07T00:00:00.0000000' AS DateTime2), 18, N'https://media.api-sports.io/football/players/7722.png', 7722, 10761, 24, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (824, N'Rodrigo', N'Gomes', N'Right Midfield', CAST(N'2003-07-07T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/282770.png', 282770, 151521, 24, 22)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (825, N'Forbs', N'Forbs', N'Left Winger', CAST(N'2004-03-19T00:00:00.0000000' AS DateTime2), 26, N'https://media.api-sports.io/football/players/282126.png', 282126, 214423, 24, 21)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (826, N'Gonçalo', N'Guedes', N'Left Winger', CAST(N'1996-11-29T00:00:00.0000000' AS DateTime2), 29, N'https://media.api-sports.io/football/players/925.png', 925, 3259, 24, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (826, N'Gon?alo', N'Guedes', N'Left Winger', CAST(N'1996-11-29T00:00:00.0000000' AS DateTime2), 29, N'https://media.api-sports.io/football/players/925.png', 925, 3259, 24, 29)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (827, N'Enso', N'Gonzalez', N'Left Winger', CAST(N'2005-01-20T00:00:00.0000000' AS DateTime2), 30, N'https://media.api-sports.io/football/players/385726.png', 385726, 193014, 24, 20)
 GO
@@ -811,7 +858,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (849, N'Oliver', N'Skipp', N'Defensive Midfield', CAST(N'2000-09-16T00:00:00.0000000' AS DateTime2), 22, N'https://media.api-sports.io/football/players/180.png', 180, 96974, 25, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (850, N'Boubakary', N'Soumaré', N'Defensive Midfield', CAST(N'1999-02-27T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/22233.png', 22233, 8406, 25, 26)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (850, N'Boubakary', N'Soumar?', N'Defensive Midfield', CAST(N'1999-02-27T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/22233.png', 22233, 8406, 25, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (851, N'Michael', N'Golding', N'Central Midfield', CAST(N'2006-05-23T00:00:00.0000000' AS DateTime2), 34, N'https://media.api-sports.io/football/players/330986.png', 330986, 245340, 25, 19)
 GO
@@ -901,7 +948,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (894, N'Cameron', N'Archer', N'Centre-Forward', CAST(N'2001-07-21T00:00:00.0000000' AS DateTime2), NULL, N'https://media.api-sports.io/football/players/304318.png', 304318, 128242, 26, 20)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (895, N'A.', N'Grønbæk', N'Midfielder', NULL, NULL, N'https://media.api-sports.io/football/players/263177.png', 263177, NULL, 26, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (895, N'A.', N'Gr?nb?k', N'Midfielder', NULL, NULL, N'https://media.api-sports.io/football/players/263177.png', 263177, NULL, 26, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (896, N'Adam', N'Armstrong', N'Centre-Forward', CAST(N'1997-02-10T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/19484.png', 19484, 4863, 26, 28)
 GO
@@ -995,19 +1042,19 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (941, N'Willy', N'Boly', N'Centre-Back', CAST(N'1991-02-03T00:00:00.0000000' AS DateTime2), 30, N'https://media.api-sports.io/football/players/18739.png', 18739, 4086, 28, 34)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (942, N'Nikola', N'Milenković', N'Centre-Back', CAST(N'1997-10-12T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/2817.png', 2817, 1775, 28, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (942, N'Nikola', N'Milenkovi?', N'Centre-Back', CAST(N'1997-10-12T00:00:00.0000000' AS DateTime2), 31, N'https://media.api-sports.io/football/players/2817.png', 2817, 1775, 28, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (943, N'Ola', N'Aina', N'Right-Back', CAST(N'1996-10-08T00:00:00.0000000' AS DateTime2), 34, N'https://media.api-sports.io/football/players/2771.png', 2771, 3386, 28, 29)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (944, N'Zach', N'Abbott', N'Centre-Back', CAST(N'2006-05-13T00:00:00.0000000' AS DateTime2), 44, N'https://media.api-sports.io/football/players/329357.png', 329357, 204483, 28, 19)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (945, N'Ibrahim', N'Sangaré', N'Defensive Midfield', CAST(N'1997-12-02T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/22149.png', 22149, 8307, 28, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (945, N'Ibrahim', N'Sangar?', N'Defensive Midfield', CAST(N'1997-12-02T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/22149.png', 22149, 8307, 28, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (946, N'Elliot', N'Anderson', N'Central Midfield', CAST(N'2002-11-06T00:00:00.0000000' AS DateTime2), 8, N'https://media.api-sports.io/football/players/138908.png', 138908, 107330, 28, 23)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (947, N'Morgan', N'Gibbs-White', N'Attacking Midfield', CAST(N'2000-01-27T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/18746.png', 18746, 4091, 28, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (948, N'Nicolás', N'Domínguez', N'Central Midfield', CAST(N'1998-06-28T00:00:00.0000000' AS DateTime2), 16, N'https://media.api-sports.io/football/players/6056.png', 6056, 46346, 28, 27)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (948, N'Nicol?s', N'Dom?nguez', N'Central Midfield', CAST(N'1998-06-28T00:00:00.0000000' AS DateTime2), 16, N'https://media.api-sports.io/football/players/6056.png', 6056, 46346, 28, 27)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (949, N'James', N'Ward-Prowse', N'Central Midfield', CAST(N'1994-11-01T00:00:00.0000000' AS DateTime2), 18, N'https://media.api-sports.io/football/players/2938.png', 2938, 8088, 28, 31)
 GO
@@ -1027,7 +1074,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (957, N'Anthony', N'Elanga', N'Right Winger', CAST(N'2002-04-27T00:00:00.0000000' AS DateTime2), 21, N'https://media.api-sports.io/football/players/153430.png', 153430, 166376, 28, 23)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (958, N'Ramón', N'Sosa', N'Left Winger', CAST(N'1999-08-31T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/196298.png', 196298, 140647, 28, 26)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (958, N'Ram?n', N'Sosa', N'Left Winger', CAST(N'1999-08-31T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/196298.png', 196298, 140647, 28, 26)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (959, N'Emmanuel', N'Dennis', N'Centre-Forward', CAST(N'1997-11-15T00:00:00.0000000' AS DateTime2), 25, N'https://media.api-sports.io/football/players/80.png', 80, 8894, 28, 28)
 GO
@@ -1045,9 +1092,9 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (966, N'Maxence', N'Lacroix', N'Centre-Back', CAST(N'2000-04-06T00:00:00.0000000' AS DateTime2), 5, N'https://media.api-sports.io/football/players/20995.png', 20995, 82351, 29, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (967, N'Marc', N'Guéhi', N'Centre-Back', CAST(N'2000-07-13T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/67971.png', 67971, 118489, 29, 25)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (967, N'Marc', N'Gu?hi', N'Centre-Back', CAST(N'2000-07-13T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/67971.png', 67971, 118489, 29, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (968, N'Daniel', N'Muñoz', N'Right-Back', CAST(N'1996-05-26T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/13736.png', 13736, 22010, 29, 29)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (968, N'Daniel', N'Mu?oz', N'Right-Back', CAST(N'1996-05-26T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/13736.png', 13736, 22010, 29, 29)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (969, N'Nathaniel', N'Clyne', N'Right-Back', CAST(N'1991-04-05T00:00:00.0000000' AS DateTime2), 17, N'https://media.api-sports.io/football/players/18862.png', 18862, 7863, 29, 34)
 GO
@@ -1071,13 +1118,13 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (979, N'Romain', N'Esse', N'Attacking Midfield', CAST(N'1999-02-06T00:00:00.0000000' AS DateTime2), 21, N'https://media.api-sports.io/football/players/402640.png', 402640, 190550, 29, 20)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (980, N'Cheick', N'Doucouré', N'Defensive Midfield', CAST(N'2000-01-08T00:00:00.0000000' AS DateTime2), 28, N'https://media.api-sports.io/football/players/3339.png', 3339, 74677, 29, 25)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (980, N'Cheick', N'Doucour?', N'Defensive Midfield', CAST(N'2000-01-08T00:00:00.0000000' AS DateTime2), 28, N'https://media.api-sports.io/football/players/3339.png', 3339, 74677, 29, 25)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (981, N'Kaden', N'Rodney', N'Defensive Midfield', CAST(N'2004-10-07T00:00:00.0000000' AS DateTime2), 42, N'https://media.api-sports.io/football/players/301295.png', 301295, 187401, 29, 21)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (982, N'Justin', N'Devenny', N'Midfield', CAST(N'2003-10-11T00:00:00.0000000' AS DateTime2), 55, N'https://media.api-sports.io/football/players/286458.png', 286458, 152149, 29, 22)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (983, N'Ismaïla', N'Sarr', N'Right Winger', CAST(N'1998-02-25T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/2218.png', 2218, 3638, 29, 27)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (983, N'Isma?la', N'Sarr', N'Right Winger', CAST(N'1998-02-25T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/2218.png', 2218, 3638, 29, 27)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (984, N'Eddie', N'Nketiah', N'Centre-Forward', CAST(N'1999-05-30T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/1468.png', 1468, 7800, 29, 26)
 GO
@@ -1095,7 +1142,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (991, N'Mark', N'Flekken', N'Goalkeeper', CAST(N'1993-06-13T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/26232.png', 26232, 9923, 30, 32)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (992, N'Hákon', N'Valdimarsson', N'Goalkeeper', CAST(N'2001-10-13T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/61742.png', 61742, 144530, 30, 24)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (992, N'H?kon', N'Valdimarsson', N'Goalkeeper', CAST(N'2001-10-13T00:00:00.0000000' AS DateTime2), 12, N'https://media.api-sports.io/football/players/61742.png', 61742, 144530, 30, 24)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (993, N'M.', N'Cox', N'Goalkeeper', NULL, 13, N'https://media.api-sports.io/football/players/278041.png', 278041, NULL, 30, 22)
 GO
@@ -1123,7 +1170,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1005, N'Michael', N'Kayode', N'Right-Back', CAST(N'2004-07-10T00:00:00.0000000' AS DateTime2), NULL, N'https://media.api-sports.io/football/players/342022.png', 342022, 204348, 30, 21)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1006, N'Christian', N'Nørgaard', N'Defensive Midfield', CAST(N'1994-03-10T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/30407.png', 30407, 24102, 30, 31)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1006, N'Christian', N'N?rgaard', N'Defensive Midfield', CAST(N'1994-03-10T00:00:00.0000000' AS DateTime2), 6, N'https://media.api-sports.io/football/players/30407.png', 30407, 24102, 30, 31)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1007, N'Kevin', N'Schade', N'Left Winger', CAST(N'2001-11-27T00:00:00.0000000' AS DateTime2), 7, N'https://media.api-sports.io/football/players/178077.png', 178077, 123286, 30, 24)
 GO
@@ -1157,11 +1204,11 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1022, N'Iwan', N'Morgan', N'Offence', CAST(N'2006-01-29T00:00:00.0000000' AS DateTime2), 40, N'https://media.api-sports.io/football/players/400938.png', 400938, 263324, 30, 19)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1023, N'Łukasz', N'Fabiański', N'Goalkeeper', CAST(N'1985-04-18T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/2997.png', 2997, 3526, 31, 40)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1023, N'?ukasz', N'Fabia?ski', N'Goalkeeper', CAST(N'1985-04-18T00:00:00.0000000' AS DateTime2), 1, N'https://media.api-sports.io/football/players/2997.png', 2997, 3526, 31, 40)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1024, N'Wesley', N'Foderingham', N'Goalkeeper', CAST(N'1991-01-14T00:00:00.0000000' AS DateTime2), 21, N'https://media.api-sports.io/football/players/1736.png', 1736, 34907, 31, 34)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1025, N'Alphonse', N'Aréola', N'Goalkeeper', CAST(N'1993-02-27T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/253.png', 253, 3357, 31, 32)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1025, N'Alphonse', N'Ar?ola', N'Goalkeeper', CAST(N'1993-02-27T00:00:00.0000000' AS DateTime2), 23, N'https://media.api-sports.io/football/players/253.png', 253, 3357, 31, 32)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1026, N'Aaron', N'Cresswell', N'Left-Back', CAST(N'1989-12-15T00:00:00.0000000' AS DateTime2), 3, N'https://media.api-sports.io/football/players/18813.png', 18813, 8201, 31, 36)
 GO
@@ -1185,15 +1232,15 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1036, N'Carlos', N'Soler', N'Central Midfield', CAST(N'1997-01-02T00:00:00.0000000' AS DateTime2), 4, N'https://media.api-sports.io/football/players/930.png', 930, 33148, 31, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1037, N'Lucas', N'Paquetá', N'Attacking Midfield', CAST(N'1997-08-27T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/1646.png', 1646, 1543, 31, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1037, N'Lucas', N'Paquet?', N'Attacking Midfield', CAST(N'1997-08-27T00:00:00.0000000' AS DateTime2), 10, N'https://media.api-sports.io/football/players/1646.png', 1646, 1543, 31, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1038, N'Mohammed', N'Kudus', N'Right Winger', CAST(N'2000-08-02T00:00:00.0000000' AS DateTime2), 14, N'https://media.api-sports.io/football/players/15911.png', 15911, 77399, 31, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1039, N'Edson', N'Álvarez', N'Defensive Midfield', CAST(N'1997-10-24T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/2869.png', 2869, 3293, 31, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1039, N'Edson', N'?lvarez', N'Defensive Midfield', CAST(N'1997-10-24T00:00:00.0000000' AS DateTime2), 19, N'https://media.api-sports.io/football/players/2869.png', 2869, 3293, 31, 28)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1040, N'Guido', N'Rodríguez', N'Defensive Midfield', CAST(N'1994-04-12T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/2476.png', 2476, 39104, 31, 31)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1040, N'Guido', N'Rodr?guez', N'Defensive Midfield', CAST(N'1994-04-12T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/2476.png', 2476, 39104, 31, 31)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1041, N'Tomáš', N'Souček', N'Defensive Midfield', CAST(N'1995-02-27T00:00:00.0000000' AS DateTime2), 28, N'https://media.api-sports.io/football/players/1243.png', 1243, 15742, 31, 30)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1041, N'Tom??', N'Sou?ek', N'Defensive Midfield', CAST(N'1995-02-27T00:00:00.0000000' AS DateTime2), 28, N'https://media.api-sports.io/football/players/1243.png', 1243, 15742, 31, 30)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1042, N'Andy', N'Irving', N'Central Midfield', CAST(N'2000-05-13T00:00:00.0000000' AS DateTime2), 39, N'https://media.api-sports.io/football/players/68466.png', 68466, 170617, 31, 25)
 GO
@@ -1203,7 +1250,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1045, N'Michail', N'Antonio', N'Centre-Forward', CAST(N'1990-03-28T00:00:00.0000000' AS DateTime2), 9, N'https://media.api-sports.io/football/players/18819.png', 18819, 8212, 31, 35)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1046, N'Niclas', N'Füllkrug', N'Centre-Forward', CAST(N'1993-02-09T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/25391.png', 25391, 304, 31, 32)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1046, N'Niclas', N'F?llkrug', N'Centre-Forward', CAST(N'1993-02-09T00:00:00.0000000' AS DateTime2), 11, N'https://media.api-sports.io/football/players/25391.png', 25391, 304, 31, 32)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1047, N'Luis', N'Guilherme', N'Right Winger', CAST(N'2006-02-09T00:00:00.0000000' AS DateTime2), 17, N'https://media.api-sports.io/football/players/404574.png', 404574, 192653, 31, 19)
 GO
@@ -1267,7 +1314,7 @@ INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth],
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1077, N'Antoine', N'Semenyo', N'Right Winger', CAST(N'2000-01-07T00:00:00.0000000' AS DateTime2), 24, N'https://media.api-sports.io/football/players/19281.png', 19281, 4417, 32, 25)
 GO
-INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1078, N'Enes', N'Ünal', N'Centre-Forward', CAST(N'1997-05-10T00:00:00.0000000' AS DateTime2), 26, N'https://media.api-sports.io/football/players/47499.png', 47499, 33132, 32, 28)
+INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1078, N'Enes', N'?nal', N'Centre-Forward', CAST(N'1997-05-10T00:00:00.0000000' AS DateTime2), 26, N'https://media.api-sports.io/football/players/47499.png', 47499, 33132, 32, 28)
 GO
 INSERT [dbo].[Players] ([Id], [FirstName], [Surname], [Position], [DateOfBirth], [Number], [ProfilePic], [ApiFootballId], [FootballDataId], [TeamId], [Age]) VALUES (1079, N'Zain', N'Silcott-Duberry', N'Midfield', CAST(N'2005-07-09T00:00:00.0000000' AS DateTime2), 43, N'https://media.api-sports.io/football/players/298060.png', 298060, 274246, 32, 20)
 GO
@@ -1320,68 +1367,4 @@ GO
 INSERT [dbo].[TeamNicknames] ([Id], [Name], [TeamId]) VALUES (44, N'The Cherries', 32)
 GO
 SET IDENTITY_INSERT [dbo].[TeamNicknames] OFF
-GO
-SET IDENTITY_INSERT [dbo].[Teams] ON 
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (14, N'Arsenal FC', N'Arsenal', N'http://www.arsenal.com/', N'https://crests.football-data.org/57.png', 57, 42, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (15, N'Aston Villa FC', N'Aston Villa', N'http://www.avfc.co.uk/', N'https://crests.football-data.org/58.png', 58, 66, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (16, N'Chelsea FC', N'Chelsea', N'http://www.chelseafc.com/', N'https://crests.football-data.org/61.png', 61, 49, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (17, N'Everton FC', N'Everton', N'http://www.evertonfc.com/', N'https://crests.football-data.org/62.png', 62, 45, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (18, N'Fulham FC', N'Fulham', N'http://www.fulhamfc.com/', N'https://crests.football-data.org/63.png', 63, 36, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (19, N'Liverpool FC', N'Liverpool', N'http://www.liverpoolfc.tv/', N'https://crests.football-data.org/64.png', 64, 40, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (20, N'Manchester City FC', N'Man City', N'https://www.mancity.com/', N'https://crests.football-data.org/65.png', 65, 50, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (21, N'Manchester United FC', N'Man United', N'http://www.manutd.com/', N'https://crests.football-data.org/66.png', 66, 33, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (22, N'Newcastle United FC', N'Newcastle', N'http://www.nufc.co.uk/', N'https://crests.football-data.org/67.png', 67, 34, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (23, N'Tottenham Hotspur FC', N'Tottenham', N'http://www.tottenhamhotspur.com/', N'https://crests.football-data.org/73.png', 73, 47, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (24, N'Wolverhampton Wanderers FC', N'Wolverhampton', N'http://www.wolves.co.uk/', N'https://crests.football-data.org/76.png', 76, 39, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (25, N'Leicester City FC', N'Leicester City', N'http://www.lcfc.com/', N'https://crests.football-data.org/338.png', 338, 46, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (26, N'Southampton FC', N'Southampton', N'http://www.saintsfc.co.uk/', N'https://crests.football-data.org/340.png', 340, 41, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (27, N'Ipswich Town FC', N'Ipswich Town', N'http://www.itfc.co.uk/', N'https://crests.football-data.org/349.png', 349, 57, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (28, N'Nottingham Forest FC', N'Nottingham', N'http://www.nottinghamforest.co.uk/', N'https://crests.football-data.org/351.png', 351, 65, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (29, N'Crystal Palace FC', N'Crystal Palace', N'http://www.cpfc.co.uk/', N'https://crests.football-data.org/354.png', 354, 52, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (30, N'Brentford FC', N'Brentford', N'http://www.brentfordfc.co.uk/', N'https://crests.football-data.org/402.png', 402, 55, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (31, N'West Ham United FC', N'West Ham', N'http://www.whufc.com/', N'https://crests.football-data.org/563.png', 563, 48, 1)
-GO
-INSERT [dbo].[Teams] ([Id], [Name], [ShortName], [Website], [EmblemPictureUri], [FootballDataId], [ApiFootballId], [LeagueId]) VALUES (32, N'AFC Bournemouth', N'Bournemouth', N'http://www.afcb.co.uk/', N'https://crests.football-data.org/bournemouth.png', 1044, 35, 1)
-GO
-SET IDENTITY_INSERT [dbo].[Teams] OFF
-GO
-ALTER TABLE [dbo].[Leagues] ADD  DEFAULT (N'') FOR [Code]
-GO
-ALTER TABLE [dbo].[Leagues] ADD  DEFAULT ((0)) FOR [Season]
-GO
-ALTER TABLE [dbo].[Players]  WITH CHECK ADD  CONSTRAINT [FK_Players_Teams_TeamId] FOREIGN KEY([TeamId])
-REFERENCES [dbo].[Teams] ([Id])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[Players] CHECK CONSTRAINT [FK_Players_Teams_TeamId]
-GO
-ALTER TABLE [dbo].[TeamNicknames]  WITH CHECK ADD  CONSTRAINT [FK_TeamNicknames_Teams_TeamId] FOREIGN KEY([TeamId])
-REFERENCES [dbo].[Teams] ([Id])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[TeamNicknames] CHECK CONSTRAINT [FK_TeamNicknames_Teams_TeamId]
-GO
-ALTER TABLE [dbo].[Teams]  WITH CHECK ADD  CONSTRAINT [FK_Teams_Leagues_LeagueId] FOREIGN KEY([LeagueId])
-REFERENCES [dbo].[Leagues] ([Id])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[Teams] CHECK CONSTRAINT [FK_Teams_Leagues_LeagueId]
 GO
