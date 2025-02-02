@@ -67,7 +67,7 @@ const TeamInfo: React.FC<TeamInfoProps> = ({ team }) => {
   return (
     <TeamRow>
       <TeamDetails>
-        <TeamImage src={team.emblemPictureUri} alt={team.name} />
+        <TeamImage src={team.emblemPictureUri} alt={team.name} loading="lazy" />
         <div>
           <TeamName>{team.name}</TeamName>
           {team.nicknames && team.nicknames.length > 0 && (

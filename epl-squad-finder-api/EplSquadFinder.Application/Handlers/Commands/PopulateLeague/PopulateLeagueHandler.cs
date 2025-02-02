@@ -73,6 +73,9 @@ public class PopulateLeagueHandler(
             PopulatePlayers(teamEntity, apiPlayers, fdPlayers);
 
             await dbContext.SaveChangesAsync(cancellationToken);
+
+            // Api has limit on request per minute. After it takes some time to cool down so it is better to wait on our side
+            await Task.Delay(10000, cancellationToken);
         }
 
         return Unit.Value;

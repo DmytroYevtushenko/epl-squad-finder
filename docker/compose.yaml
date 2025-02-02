@@ -1,0 +1,67 @@
+﻿version: '3.9'  # Required for `service_completed_successfully`
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ef_squad_finder_db_container
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "password1234$"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep sqlservr > /dev/null || exit 1"] # Consider updating it to use sqlcmd
+      interval: 10s
+      retries: 10
+      start_period: 40s
+      timeout: 5s
+
+  data-generation:
+    build:
+      context: ../epl-squad-finder-api
+      dockerfile: EplSquadFinder.DataGeneration/Dockerfile
+    container_name: epl_squad_finder_data_generation
+    environment:
+      ConnectionStrings__EplSquadFinderDb: "Data Source=ef_squad_finder_db_container,1433;Initial Catalog=EplSquadFinderDb;User ID=sa;Password=password1234$;Encrypt=False;TrustServerCertificate=True;"
+      ExternalApis__FootballData__BaseUrl: "https://api.football-data.org/v4"
+      ExternalApis__FootballData__ApiKey: "fd6be87e3fa349979b915f096d7d9ff4"
+      ExternalApis__ApiFootballService__BaseUrl: "https://v3.football.api-sports.io/"
+      ExternalApis__ApiFootballService__ApiKey: "c633f7bf306726887cacfcdc7c46eb93"
+    depends_on:
+      mssql:
+        condition: service_healthy
+    restart: "no" # Ensures it does not restart after finishing
+
+  api:
+    build:
+      context: ../epl-squad-finder-api
+      dockerfile: EplSquadFinder.Api/Dockerfile
+    container_name: epl_squad_finder_api
+    environment:
+      ConnectionStrings__EplSquadFinderDb: "Data Source=ef_squad_finder_db_container,1433;Initial Catalog=EplSquadFinderDb;User ID=sa;Password=password1234$;Encrypt=False;TrustServerCertificate=True;"
+      ExternalApis__FootballData__BaseUrl: "https://api.football-data.org/v4"
+      ExternalApis__FootballData__ApiKey: ""
+      ExternalApis__ApiFootballService__BaseUrl: "https://v3.football.api-sports.io/"
+      ExternalApis__ApiFootballService__ApiKey: ""
+    ports:
+      - "5290:8080"
+    depends_on:
+      data-generation:
+        condition: service_completed_successfully
+
+  ui:
+    build:
+      context: ../epl-squad-finder-ui
+      dockerfile: Dockerfile
+    container_name: epl_squad_finder_ui
+    ports:
+      - "3000:80"
+    depends_on:
+      api:
+        condition: service_started
+
+volumes:
+  mssql_data:
