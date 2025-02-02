@@ -54,7 +54,7 @@ Make sure you have installed:
 
 ### 🔹 2. Clone the Repository
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/epl-squad-finder.git
+git clone https://github.com/DmytroYevtushenko/epl-squad-finder.git
 cd epl-squad-finder
 ```
 
