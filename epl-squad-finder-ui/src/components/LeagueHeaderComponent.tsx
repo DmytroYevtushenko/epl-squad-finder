@@ -42,18 +42,23 @@ const LeagueHeaderComponent: React.FC<LeagueHeaderProps> = ({
   season,
   seasonStartDate,
   seasonEndDate,
-}) => (
-  <Header>
-    <Row>
-      <Logo src={emblemPictureUri} alt={name} />
-      <Name>{name}</Name>
-    </Row>
-    <Season>
-      Season: {season} (
-      {new Date(seasonStartDate).toLocaleDateString()} -{" "}
-      {new Date(seasonEndDate).toLocaleDateString()})
-    </Season>
-  </Header>
-);
+}) => {
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+  const formattedDateRange = `${formatDate(seasonStartDate)} - ${formatDate(
+    seasonEndDate
+  )}`;
 
-export default LeagueHeaderComponent; 
+  return (
+    <Header>
+      <Row>
+        {emblemPictureUri && <Logo src={emblemPictureUri} alt={name} />}
+        <Name>{name}</Name>
+      </Row>
+      <Season>
+        Season: {season} ({formattedDateRange})
+      </Season>
+    </Header>
+  );
+};
+
+export default LeagueHeaderComponent;

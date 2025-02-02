@@ -13,6 +13,10 @@ const TeamList = styled.div`
   margin-top: 1rem;
 `;
 
+const PageContainer = styled.div`
+  padding: 1rem;
+`;
+
 const LeaguePage = () => {
   const LeagueId = 1; // Use as the default league id
   const [leagueData, setLeagueData] = useState<League | null>(null);
@@ -42,25 +46,23 @@ const LeaguePage = () => {
     ?.map((team) => <TeamInfo key={team.id} team={team} />);
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <>
-        <LeagueHeaderComponent
-          emblemPictureUri={leagueData.emblemPictureUri}
-          name={leagueData.name}
-          season={leagueData.season}
-          seasonStartDate={leagueData.seasonStartDate}
-          seasonEndDate={leagueData.seasonEndDate}
-        />
+    <PageContainer>
+      <LeagueHeaderComponent
+        emblemPictureUri={leagueData.emblemPictureUri}
+        name={leagueData.name}
+        season={leagueData.season}
+        seasonStartDate={leagueData.seasonStartDate}
+        seasonEndDate={leagueData.seasonEndDate}
+      />
 
-        <SearchInput
-          placeholder="Search teams..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <SearchInput
+        placeholder="Search teams..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
 
-        <TeamList>{filteredTeams}</TeamList>
-      </>
-    </div>
+      <TeamList>{filteredTeams}</TeamList>
+    </PageContainer>
   );
 };
 

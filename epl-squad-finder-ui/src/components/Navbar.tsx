@@ -18,7 +18,7 @@ const Nav = styled.nav`
 const Title = styled.h1`
   font-size: 1.5rem;
   margin: 0;
-  color: inherit; /* Inherit color from Nav */
+  color: inherit;
 `;
 
 const StyledLink = styled(Link)`

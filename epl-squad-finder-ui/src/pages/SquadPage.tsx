@@ -1,4 +1,9 @@
-import { Team, addNicknameToTeam, getTeamData, removeNicknameFromTeam } from "../api/api";
+import {
+  Team,
+  addNicknameToTeam,
+  getTeamData,
+  removeNicknameFromTeam,
+} from "../api/api";
 import { useEffect, useState } from "react";
 
 import NicknameManager from "../components/NicknameManager";
@@ -68,6 +73,10 @@ const SquadPage = () => {
     }
   }, [teamData]);
 
+  if (!teamData) {
+    return <Container>Loading...</Container>;
+  }
+
   const onAddNickname = async (nickname: string) => {
     try {
       const addedNick = await addNicknameToTeam(Number(id), nickname);
@@ -86,20 +95,21 @@ const SquadPage = () => {
     }
   };
 
-  if (!teamData) {
-    return <Container>Loading...</Container>;
-  }
-
   const filteredPlayers = teamData.players
-    ? teamData.players.filter((player) => {
-        const term = playerSearchTerm.toLowerCase();
-        return (
-          player.firstName.toLowerCase().includes(term) ||
-          player.surname.toLowerCase().includes(term) ||
-          player.position.toLowerCase().includes(term)
-        );
-      })
-    : [];
+    ?.filter((player) => {
+      const term = playerSearchTerm.toLowerCase();
+      return (
+        player.firstName.toLowerCase().includes(term) ||
+        player.surname.toLowerCase().includes(term) ||
+        player.position.toLowerCase().includes(term)
+      );
+    })
+    .map((player) => (
+      <PlayerCard
+        key={`${player.firstName}-${player.surname}-${player.number}`}
+        player={player}
+      />
+    ));
 
   return (
     <Container>
@@ -113,40 +123,24 @@ const SquadPage = () => {
           {teamData.website}
         </a>
       </Info>
-      
+
       <ContentWrapper>
         <NicknameManager
           nicknames={nicknames}
           onAddNickname={onAddNickname}
           onRemoveNickname={onRemoveNickname}
         />
-        
-        {/* Search Input for filtering players */}
+
         <SearchInput
           placeholder="Search players..."
           value={playerSearchTerm}
           onChange={(e) => setPlayerSearchTerm(e.target.value)}
         />
-        
-        {/* Player cards */}
-        <PlayerList>
-          {filteredPlayers
-            .sort((a, b) => {
-              // Players with dateOfBirth come first
-              if (a.dateOfBirth && !b.dateOfBirth) return -1;
-              if (!a.dateOfBirth && b.dateOfBirth) return 1;
-              return 0;
-            })
-            .map((player) => (
-              <PlayerCard 
-                key={`${player.firstName}-${player.surname}-${player.number}`}
-                player={player}
-              />
-            ))}
-        </PlayerList>
+
+        <PlayerList>{filteredPlayers}</PlayerList>
       </ContentWrapper>
     </Container>
   );
 };
 
-export default SquadPage; 
+export default SquadPage;

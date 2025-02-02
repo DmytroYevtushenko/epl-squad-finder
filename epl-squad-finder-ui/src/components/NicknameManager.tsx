@@ -81,7 +81,7 @@ const NicknameManager: React.FC<NicknameManagerProps> = ({
   const handleAddNickname = () => {
     if (inputRef.current && inputRef.current.value.trim() !== "") {
       onAddNickname(inputRef.current.value.trim());
-      inputRef.current.value = ""; // Clear the input
+      inputRef.current.value = "";
       setIsAddingNickname(false);
     }
   };
