@@ -1,5 +1,7 @@
 # ⚽ EPL Squad Finder
 
+![Build Status](https://github.com/DmytroYevtushenko/epl-squad-finder/actions/workflows/pipeline.yml/badge.svg)
+
 🚀 **EPL Squad Finder** is a web-based proof of concept (POC) application that allows users to select any team from the **2024/25 English Premier League season** and view detailed squad information.
 
 The app **pre-fetches squad data** from two external APIs:
@@ -20,6 +22,12 @@ Due to API rate limits, we use a **custom matching algorithm** to **combine** th
 - Position  
 
 📦 **All matched data is stored in a database for fast retrieval and displayed via a user-friendly web interface.**
+
+## 📄 Documentation
+
+For detailed documentation, please visit our Notion page: [EPL Squad Finder Documentation](https://versed-fountain-300.notion.site/EPL-Squad-Finder-18e9a784b6c980119ecce3e7232ad461?pvs=74).
+
+A PDF version of the documentation is also available in the `docs` folder.
 
 ---
 
@@ -130,3 +138,20 @@ Once everything is running, open a browser and go to:
 | DELETE | /api/teamnicknames/{nicknameId}       | Remove a nickname                |
 
 For API endpoints testing check [EplSquadFinder.http](https://github.com/DmytroYevtushenko/epl-squad-finder/blob/main/epl-squad-finder-api/EplSquadFinder.Api/EplSquadFinder.http)
+
+## 📊 Database Diagrams
+
+To view and edit the database diagrams, you can use PlantUML. The `.pu` files located in the `docs/diagrams/` folder can be opened with:
+
+- **The PlantUML Online Editor**: [www.plantuml.com/plantuml/uml](http://www.plantuml.com/plantuml/uml)
+- **A local installation of PlantUML** with a compatible IDE, such as:
+  - **IntelliJ IDEA**: Use the PlantUML integration plugin.
+  - **Visual Studio Code**: Use the PlantUML extension.
+- **The VSC extension**: [PlantUML for VS Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml).
+
+### How to Use
+
+1. **Online Editor**: Copy the contents of the `.pu` files into the PlantUML online editor to generate the database diagrams visually.
+2. **Local Installation**: Open the `.pu` files in your IDE with the PlantUML plugin to view and edit the diagrams.
+
+This setup allows you to easily visualize and modify the database structure as needed.

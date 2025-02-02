@@ -1,0 +1,68 @@
+@startuml
+skinparam BackgroundColor #F8F9FA
+skinparam ClassBackgroundColor #A7F2CE
+skinparam ClassBorderColor #333333
+skinparam ClassFontColor #333333
+skinparam ArrowColor #333333
+skinparam Shadowing false
+skinparam linetype ortho
+
+class Leagues {
+   + Id: int
+   --
+   Name: nvarchar(100)
+   Code: nvarchar(10)
+   Season: int
+   SeasonStartDate: datetime2
+   SeasonEndDate: datetime2
+   EmblemPictureUri: nvarchar(255)
+   FootballDataId: int
+   ApiFootballId: int
+}
+
+class Teams {
+   + Id: int
+   --
+   Name: nvarchar(100)
+   ShortName: nvarchar(50)
+   Website: nvarchar(255)
+   EmblemPictureUri: nvarchar(255)
+   FootballDataId: int
+   ApiFootballId: int
+   LeagueId: int
+}
+
+class Players {
+   + Id: int
+   --
+   FirstName: nvarchar(50)
+   Surname: nvarchar(50)
+   Position: nvarchar(20)
+   DateOfBirth: datetime2
+   Age: int
+   Number: int
+   ProfilePic: nvarchar(255)
+   ApiFootballId: int
+   FootballDataId: int
+   TeamId: int
+}
+
+class TeamNicknames {
+   + Id: int
+   --
+   Name: nvarchar(100)
+   TeamId: int
+}
+
+class __EFMigrationsHistory {
+   + MigrationId: nvarchar(150)
+   --
+   ProductVersion: nvarchar(32)
+}
+
+Leagues "1" --* "many" Teams : "LeagueId:Id"
+
+Teams "1" --* "many" Players : "TeamId:Id"
+
+Teams "1" --* "many" TeamNicknames : "TeamId:Id"
+@enduml
