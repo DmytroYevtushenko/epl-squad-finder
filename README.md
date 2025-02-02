@@ -59,7 +59,10 @@ cd epl-squad-finder
 ```
 
 ### 🔹 3. Run with Docker (Recommended)
+Navigate to the `docker` directory and run the following command:
+
 ```sh
+cd docker
 docker compose up --build
 ```
 🚀 This will automatically start:
