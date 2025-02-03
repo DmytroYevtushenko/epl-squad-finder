@@ -31,7 +31,7 @@ jobs:
 
   build_and_push:
     needs: build_and_test
-    #if: github.ref == 'refs/heads/main' # Push images only if code is already in main
+    if: github.ref == 'refs/heads/main' # Push images only if code is already in main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
