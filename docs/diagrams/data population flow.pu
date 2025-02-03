@@ -9,15 +9,20 @@ database "Database (MS SQL)" as DB
 DGS -> DB: Fetch existing leagues
 
 DGS -> FDA: GET /competitions/{leagueCode}/teams?season={season}
-FDA --> DGS: Return teams with country info
+FDA --> DGS: Return teams with players info
 
 DGS -> APIF: GET /teams?country={country}
 APIF --> DGS: Return teams for country
 
-loop For each team
-    DGS -> APIF: GET /players/squads?team={teamId}
+DGS -> DGS: Match teams to determine IDs for API-Football
+
+loop For each matched team
+    DGS -> APIF: GET /players/squads?team={matchedTeamId}
     APIF --> DGS: Return squad details
 
-    DGS -> DB: Store team & players
+    DGS -> DGS: Match players to get full info
+
+    DGS -> DB: Store team & matched players
 end loop
+
 @enduml
