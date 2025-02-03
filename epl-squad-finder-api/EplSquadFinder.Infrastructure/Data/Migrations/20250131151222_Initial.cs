@@ -173,11 +173,10 @@ namespace EplSquadFinder.Infrastructure.Data.Migrations
                 table: "Teams",
                 column: "LeagueId");
 
-            // Already have the index below that includes Name
-            // migrationBuilder.CreateIndex(
-            //     name: "IX_Teams_Name",
-            //     table: "Teams",
-            //     column: "Name");
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_Name",
+                table: "Teams",
+                column: "Name");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Teams_Name_LeagueId",

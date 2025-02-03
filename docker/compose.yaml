@@ -25,7 +25,7 @@ services:
       dockerfile: EplSquadFinder.DataGeneration/Dockerfile
     container_name: epl_squad_finder_data_generation
     environment:
-      ConnectionStrings__EplSquadFinderDb: "Data Source=ef_squad_finder_db_container,1433;Initial Catalog=EplSquadFinderDbSeed;User ID=sa;Password=password1234$;Encrypt=False;TrustServerCertificate=True;"
+      ConnectionStrings__EplSquadFinderDb: "Data Source=ef_squad_finder_db_container,1433;Initial Catalog=EplSquadFinderDb;User ID=sa;Password=password1234$;Encrypt=False;TrustServerCertificate=True;"
       ExternalApis__FootballData__BaseUrl: "https://api.football-data.org/v4"
       ExternalApis__FootballData__ApiKey: ""
       ExternalApis__ApiFootballService__BaseUrl: "https://v3.football.api-sports.io/"
@@ -41,7 +41,7 @@ services:
       dockerfile: EplSquadFinder.Api/Dockerfile
     container_name: epl_squad_finder_api
     environment:
-      ConnectionStrings__EplSquadFinderDb: "Data Source=ef_squad_finder_db_container,1433;Initial Catalog=EplSquadFinderDbSeed;User ID=sa;Password=password1234$;Encrypt=False;TrustServerCertificate=True;"
+      ConnectionStrings__EplSquadFinderDb: "Data Source=ef_squad_finder_db_container,1433;Initial Catalog=EplSquadFinderDb;User ID=sa;Password=password1234$;Encrypt=False;TrustServerCertificate=True;"
       ExternalApis__FootballData__BaseUrl: "https://api.football-data.org/v4"
       ExternalApis__FootballData__ApiKey: ""
       ExternalApis__ApiFootballService__BaseUrl: "https://v3.football.api-sports.io/"
@@ -68,7 +68,7 @@ services:
     container_name: db_seed_container
     volumes:
       - ../database/seed.sql:/seed.sql
-    entrypoint: /bin/bash -c "/opt/mssql-tools/bin/sqlcmd -S ef_squad_finder_db_container -U sa -P password1234$ -d EplSquadFinderDbSeed -i /seed.sql"
+    entrypoint: /bin/bash -c "/opt/mssql-tools/bin/sqlcmd -S ef_squad_finder_db_container -U sa -P password1234$ -d EplSquadFinderDb -i /seed.sql"
     depends_on:
       data-generation:
         condition: service_completed_successfully

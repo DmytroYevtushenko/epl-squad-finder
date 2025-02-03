@@ -10,11 +10,7 @@ public class TeamNicknameConfiguration : IEntityTypeConfiguration<TeamNickname>
     {
         builder.Property(n => n.Name).HasMaxLength(100).IsRequired();
 
-        // No nickname duplicates inside team
         builder.HasIndex(n => new { n.TeamId, n.Name })
             .IsUnique();
-
-        // To search by nicknames
-        builder.HasIndex(n => n.Name);
     }
 }

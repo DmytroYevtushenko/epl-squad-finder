@@ -13,11 +13,6 @@ public class TeamConfiguration : IEntityTypeConfiguration<Team>
         builder.Property(t => t.Website).HasMaxLength(255);
         builder.Property(t => t.EmblemPictureUri).HasMaxLength(255);
 
-        // To search by team names
-        builder.HasIndex(t => t.Name);
-
-        builder.HasIndex(t => new { t.Name, t.LeagueId }).IsUnique();
-        builder.HasIndex(p => p.ApiFootballId).IsUnique().HasFilter("[ApiFootballId] IS NOT NULL");
-        builder.HasIndex(p => p.FootballDataId).IsUnique().HasFilter("[FootballDataId] IS NOT NULL");
+        builder.HasIndex(t => new { t.LeagueId, t.Name }).IsUnique();
     }
 }

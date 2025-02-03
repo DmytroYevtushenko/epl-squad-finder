@@ -13,7 +13,6 @@ public class PlayerConfiguration : IEntityTypeConfiguration<Player>
         builder.Property(p => p.Position).HasMaxLength(20).IsRequired();
         builder.Property(p => p.ProfilePic).HasMaxLength(255);
 
-        builder.HasIndex(p => p.ApiFootballId).IsUnique().HasFilter("[ApiFootballId] IS NOT NULL");
-        builder.HasIndex(p => p.FootballDataId).IsUnique().HasFilter("[FootballDataId] IS NOT NULL");
+        builder.HasIndex(p => p.TeamId);
     }
 }

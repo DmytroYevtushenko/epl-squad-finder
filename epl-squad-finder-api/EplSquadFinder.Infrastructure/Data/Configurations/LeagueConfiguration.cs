@@ -19,8 +19,6 @@ public class LeagueConfiguration : IEntityTypeConfiguration<League>
         builder.Property(l => l.EmblemPictureUri).HasMaxLength(255);
 
         builder.HasIndex(l => l.Name).IsUnique();
-        builder.HasIndex(p => p.ApiFootballId).IsUnique().HasFilter("[ApiFootballId] IS NOT NULL");
-        builder.HasIndex(p => p.FootballDataId).IsUnique().HasFilter("[FootballDataId] IS NOT NULL");
 
         builder.HasData(new League
         {
