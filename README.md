@@ -1,6 +1,17 @@
 # ⚽ EPL Squad Finder
-
+    
 ![Build Status](https://github.com/DmytroYevtushenko/epl-squad-finder/actions/workflows/pipeline.yml/badge.svg)
+
+> **⚠️ Project Context**
+>
+> This repository contains a test assignment completed for a **Senior Fullstack Engineer** position.
+>
+> * **⏳ Time limit:** 3 days (72 hours).
+> * **🎯 Goal:** To implement a production-ready MVP of a footbal squad viewer with a real data, demonstrating skills in data aggregation, **full-stack development (.NET, React), and cloud deployment (Azure)**.
+> * **🧊 Status:** Archived / Read-only.
+> * **💡 Note:** Given the strict time limit, the primary focus was on delivering a fully functional end-to-end solution (including Azure deployment and CI/CD). Architectural patterns were implemented to demonstrate structural intent, though some layers were simplified to ensure on-time delivery.
+
+---
 
 🚀 **EPL Squad Finder** is a web-based proof of concept (POC) application that allows users to select any team from the **2024/25 English Premier League season** and view detailed squad information.
 
